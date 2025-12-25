@@ -1,3 +1,5 @@
+import MainPage from '@/pages/MainPage/MainPage'
+
 export default function Home() {
-	return <div></div>
+	return <MainPage />
 }
