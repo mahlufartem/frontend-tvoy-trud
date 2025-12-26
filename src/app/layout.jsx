@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang='en'>
+		<html lang='ru'>
 			<body className={involve.className}>
 				<div className={styles.root}>
 					<Header />

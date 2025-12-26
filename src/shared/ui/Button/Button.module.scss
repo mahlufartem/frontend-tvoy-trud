@@ -1,0 +1,36 @@
+.root {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 163px ;
+	padding: 21px 28px;
+	font-size: 24px;
+	font-weight: 500;
+	color: $main-blue;
+	border: 1px solid $main-blue;
+	border-radius: 60px;
+	background-color: transparent;
+	cursor: pointer;
+
+	@media (max-width: 1440px) {
+		min-width: 123px;
+		padding: 16px 21px;
+		font-size: 18px;
+	}
+
+	@media (max-width: 1024px) {
+	}
+
+	@media (max-width: 768px) {
+	}
+
+
+	@media (max-width: 360px) {
+	}
+
+}
+
+.root.secondary {
+	color: $main-black;
+	border-color: $main-black;
+}

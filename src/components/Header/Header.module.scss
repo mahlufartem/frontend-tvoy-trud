@@ -1,3 +1,116 @@
 .root {
+   position: fixed;
+  width: 100%;
+  height: 116px;
+  padding: 0 130px;
 
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: $main-white;
+    border-radius: 0 0 33px 33px;
+    padding: 0 28px;
+  }
+
+
+  .logo {
+
+    & img {
+      width: 301px;
+      height: 60px;
+
+      @media (max-width: 1440px) {
+        width: 226px;
+        height: 45px;
+      }
+
+      @media (max-width: 1024px) {
+        height: 87px;
+        padding: 0 60px;
+      }
+
+      @media (max-width: 768px) {
+        height: 80px;
+      }
+
+
+      @media (max-width: 360px) {
+        padding: 0 ;
+      }
+    }
+
+  }
+
+  .leftSection {
+    display: flex;
+
+
+    @media (max-width: 1440px) {
+      gap: 24px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .contacts {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .socialIcons {
+      display: flex;
+      gap: 5px;
+    }
+
+    .phone {
+      font-size: 30px;
+      font-weight: 700;
+
+      @media (max-width: 1440px) {
+        font-size: 22px;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      @media (max-width: 1440px) {
+        gap: 20px;
+      }
+    }
+  }
+
+
+  @media (max-width: 1440px) {
+    height: 87px;
+    padding: 0 98px;
+  }
+
+  @media (max-width: 1024px) {
+    height: 87px;
+    padding: 0 60px;
+  }
+
+  @media (max-width: 768px) {
+    height: 80px;
+  }
+
+
+  @media (max-width: 360px) {
+    padding: 0 ;
+  }
 }
