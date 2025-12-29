@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -7,12 +9,10 @@ import { APP_ROUTES } from '@/constants/routes'
 import PencilIcon from '@/assets/icons/PencilIcon'
 import TelegramIcon from '@/assets/icons/TelegramIcon'
 import WhatsAppIcon from '@/assets/icons/WhatsAppIcon'
+import { logo } from '@/assets/images/index'
 
-import AppNavigation from '@/components/AppNavigation/AppNavigation'
-
+import Burger from '@/shared/ui/Burger/Burger'
 import Button from '@/shared/ui/Button/Button'
-
-import { logo } from '../../assets/images/index'
 
 import styles from './Header.module.scss'
 
@@ -47,7 +47,13 @@ const Header = () => {
 							<Button>Каталог вакансий</Button>
 						</Link>
 
-						<Button variant='secondary'>Меню</Button>
+						<div className={styles.desktopMenu}>
+							<Button variant='secondary'>Меню</Button>
+						</div>
+
+						<div className={styles.burgerMenu}>
+							<Burger />
+						</div>
 					</div>
 				</div>
 			</div>

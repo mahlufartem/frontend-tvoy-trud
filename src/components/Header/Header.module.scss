@@ -94,6 +94,19 @@
     }
   }
 
+  .desktopMenu {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .burgerMenu {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
 
   @media (max-width: 1440px) {
     height: 87px;
