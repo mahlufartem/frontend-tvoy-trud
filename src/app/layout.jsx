@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
 			<body className={involve.className}>
 				<div className={styles.root}>
 					<Header />
-					<div className={styles.content}>{children}</div>
+					<main className={styles.content}>{children}</main>
 					<Footer />
 				</div>
 			</body>
