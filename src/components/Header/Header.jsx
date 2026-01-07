@@ -9,7 +9,7 @@ import { APP_ROUTES } from '@/constants/routes'
 import PencilIcon from '@/assets/icons/PencilIcon'
 import TelegramIcon from '@/assets/icons/TelegramIcon'
 import WhatsAppIcon from '@/assets/icons/WhatsAppIcon'
-import { logo } from '@/assets/images/index'
+import { logo, logoMobile } from '@/assets/images/index'
 
 import Burger from '@/shared/ui/Burger/Burger'
 import Button from '@/shared/ui/Button/Button'
@@ -21,14 +21,22 @@ const Header = () => {
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
 				<div className={styles.logo}>
-					<Link href={APP_ROUTES.main}>
+					<Link href={APP_ROUTES.primary.main}>
 						<Image
 							src={logo}
-							alt='logo'
+							alt='Твой труд'
 						/>
 					</Link>
 				</div>
-				<div className={styles.leftSection}>
+				<div className={styles.logoMobile}>
+					<Link href={APP_ROUTES.primary.main}>
+						<Image
+							src={logoMobile}
+							alt='Твой труд'
+						/>
+					</Link>
+				</div>
+				<div className={styles.rightSection}>
 					<div className={styles.info}>
 						<div className={styles.location}>
 							<span>Ярославль</span>
@@ -43,22 +51,17 @@ const Header = () => {
 						</div>
 					</div>
 					<div className={styles.buttons}>
-						<Link href={APP_ROUTES.catalog}>
+						<Link
+							href={APP_ROUTES.primary.catalog}
+							className={styles.catalogBtn}
+						>
 							<Button>Каталог вакансий</Button>
 						</Link>
 
-						<div className={styles.desktopMenu}>
-							<Button variant='secondary'>Меню</Button>
-						</div>
-
-						<div className={styles.burgerMenu}>
-							<Burger />
-						</div>
+						<Burger />
 					</div>
 				</div>
 			</div>
-
-			{/*<AppNavigation />*/}
 		</div>
 	)
 }

@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 import styles from './Burger.module.scss'
 
-const Burger = ({ onClick }) => {
+const Burger = ({ onClick, isMobile }) => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	const handleClick = () => {
@@ -16,15 +16,18 @@ const Burger = ({ onClick }) => {
 
 	return (
 		<div
-			className={clsx(styles.root, isOpen && styles.open)}
+			className={styles.root}
 			onClick={handleClick}
 		>
-			{[0, 1, 2].map((line, idx) => (
-				<span
-					key={idx}
-					className={styles.line}
-				/>
-			))}
+			<div className={clsx(styles.wrapper, isOpen && styles.open)}>
+				{[0, 1, 2].map((line, idx) => (
+					<span
+						key={idx}
+						className={styles.line}
+					/>
+				))}
+			</div>
+			<span className={styles.text}>Меню</span>
 		</div>
 	)
 }

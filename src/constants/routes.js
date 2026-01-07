@@ -1,7 +1,17 @@
 export const APP_ROUTES = {
-	main: '/',
-	catalog: '/catalog',
-	promo: '/promo',
-	knowledgeBase: '/knowledge_base',
-	about: '/about'
+	primary: {
+		main: '/',
+		catalog: '/catalog',
+		promo: '/promo',
+		knowledgeBase: '/knowledge_base',
+		about: '/about'
+	},
+	secondary: {
+		faq: '/faq',
+		instructions: '/instructions',
+		docs: '/docs',
+		self_employed: '/self-employed',
+		contacts: '/contacts',
+		partners: '/partners'
+	}
 }
