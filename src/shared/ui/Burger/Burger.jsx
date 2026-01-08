@@ -1,25 +1,28 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 
 import clsx from 'clsx'
 
+import { useMainMenuStore } from '@/store/mainMenuStore'
+
 import styles from './Burger.module.scss'
 
-const Burger = ({ onClick, isMobile }) => {
-	const [isOpen, setIsOpen] = useState(false)
+const Burger = ({ onClick, text = 'Меню' }) => {
+	const { isMenuOpen, toggleMenu } = useMainMenuStore()
 
-	const handleClick = () => {
-		setIsOpen(prev => !prev)
+	const handleClick = e => {
+		e.stopPropagation()
+		toggleMenu()
 		onClick?.()
 	}
 
 	return (
 		<div
 			className={styles.root}
-			onClick={handleClick}
+			onClick={e => handleClick(e)}
 		>
-			<div className={clsx(styles.wrapper, isOpen && styles.open)}>
+			<div className={clsx(styles.wrapper, isMenuOpen && styles.open)}>
 				{[0, 1, 2].map((line, idx) => (
 					<span
 						key={idx}
@@ -27,7 +30,7 @@ const Burger = ({ onClick, isMobile }) => {
 					/>
 				))}
 			</div>
-			<span className={styles.text}>Меню</span>
+			<span className={styles.text}>{text}</span>
 		</div>
 	)
 }

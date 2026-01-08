@@ -1,4 +1,9 @@
 .root {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+
+  font-size: 18px;
+  font-weight: 500;
+  color: $main-light-black;
 }

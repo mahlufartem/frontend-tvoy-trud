@@ -2,6 +2,13 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  z-index: 99;
+  max-width: fit-content;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: $main-light-blue;
+  }
 
   .wrapper {
     display: flex;

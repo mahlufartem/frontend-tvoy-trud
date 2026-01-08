@@ -4,6 +4,7 @@ export const APP_ROUTES = {
 		catalog: '/catalog',
 		promo: '/promo',
 		knowledgeBase: '/knowledge_base',
+		contacts: '/contacts',
 		about: '/about'
 	},
 	secondary: {

@@ -11,6 +11,12 @@
 	border-radius: 60px;
 	background-color: transparent;
 	cursor: pointer;
+	transition: background-color .3s;
+
+	&:hover {
+		background-color: $main-light-blue;
+	}
+
 
 	@media (max-width: 1440px) {
 		min-width: 123px;

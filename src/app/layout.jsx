@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
+import MainMenu from '@/components/MainMenu/MainMenu'
 
 import { involve } from '@/styles/fonts/'
 import '@/styles/globals.scss'
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
 					<Header />
 					<main className={styles.content}>{children}</main>
 					<Footer />
+					<MainMenu />
 				</div>
 			</body>
 		</html>

@@ -1,0 +1,42 @@
+.root {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.input {
+	width: 100%;
+	padding: 20px 20px 20px 72px;
+	border: none;
+	border-radius: 60px;
+	background-color: $main-white;
+	font-size: 18px;
+	font-weight: 500;
+	color: $main-light-black;
+	outline: none;
+
+	&::placeholder {
+		color: $main-light-black;
+	}
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: $main-light-black;
+}
+
+.icon-left {
+	position: absolute;
+	left: 28px;
+	top: 50%;
+	transform: translateY(-50%);
+
+}
+
+.icon-right {
+  right: 28px;
+}
