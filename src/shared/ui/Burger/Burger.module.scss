@@ -5,6 +5,7 @@
   z-index: 99;
   max-width: fit-content;
   transition: background-color .3s;
+  user-select: none;
 
   &:hover {
     background-color: $main-light-blue;
@@ -27,6 +28,7 @@
       height: 1px;
       background-color: $main-black;
       transition: transform 0.25s ease, opacity 0.2s ease;
+      user-select: none;
     }
   }
 
