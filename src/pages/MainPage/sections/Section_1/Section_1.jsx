@@ -7,9 +7,9 @@ import 'swiper/css/pagination'
 import { Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import styles from './SectionOne.module.scss'
+import styles from './Section_1.module.scss'
 
-const SectionOne = () => {
+const Section_1 = () => {
 	return (
 		<section className={styles.root}>
 			<Swiper
@@ -29,4 +29,4 @@ const SectionOne = () => {
 	)
 }
 
-export default SectionOne
+export default Section_1

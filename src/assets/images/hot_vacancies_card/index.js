@@ -1,0 +1,6 @@
+export { default as vacanci_1 } from './vacanci_1.png'
+export { default as vacanci_2 } from './vacanci_2.png'
+export { default as vacanci_3 } from './vacanci_3.png'
+export { default as vacanci_4 } from './vacanci_4.png'
+export { default as vacanci_5 } from './vacanci_5.png'
+export { default as vacanci_6 } from './vacanci_6.png'
