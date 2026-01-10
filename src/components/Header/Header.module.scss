@@ -5,6 +5,10 @@
 	padding: 0 130px;
 	z-index: 10;
 
+	@media (max-width: 1919px) {
+		padding: 0 98px;
+	}
+
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -57,10 +61,8 @@
 
 	.rightSection {
 		display: flex;
+		gap: 24px;
 
-		@media (max-width: 1440px) {
-			gap: 24px;
-		}
 
 		@media (max-width: 1023px) {
 			gap: 14px;

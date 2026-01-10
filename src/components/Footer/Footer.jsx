@@ -11,7 +11,7 @@ import { footerLinks } from './data'
 
 const Footer = () => {
 	return (
-		<footer className={styles.footer}>
+		<footer className={styles.root}>
 			<div className={styles.container}>
 				<div className={styles.top}>
 					<div className={styles.header}>

@@ -108,6 +108,12 @@
 	position: absolute;
 	top: -28px;
 	left: 28px;
+	transition: all .3s;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.2);
+	}
 
 	& img {
 		width: 116px;

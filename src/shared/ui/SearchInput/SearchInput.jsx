@@ -14,6 +14,7 @@ const SearchInput = forwardRef(
 			placeholder = 'Поиск по вакансиям',
 			className,
 			inputClassName,
+			iconClassName,
 			disabled,
 			iconPosition = 'left'
 		},
@@ -21,7 +22,13 @@ const SearchInput = forwardRef(
 	) => {
 		return (
 			<div className={clsx(styles.root, className)}>
-				<span className={clsx(styles.icon, styles[`icon-${iconPosition}`])}>
+				<span
+					className={clsx(
+						styles.icon,
+						iconClassName,
+						styles[`icon-${iconPosition}`]
+					)}
+				>
 					<SearchIcon
 						width='24'
 						height='24'

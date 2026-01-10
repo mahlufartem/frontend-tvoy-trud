@@ -1,0 +1,111 @@
+.root {
+	background-color: $main-white;
+	padding: 80px 98px;
+
+	@media (max-width: 1919px) {
+		padding: 60px 98px;
+	}
+
+	@media (max-width: 1439px) {
+		padding: 60px 60px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 40px 20px;
+	}
+}
+
+.cityVacanci {
+	width: 100%;
+	display: flex;
+	gap: 20px;
+	height: 340px;
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+		height: 640px;
+	}
+}
+
+.search {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 40%;
+	height: 100%;
+	background-color: $main-blue;
+	color: $main-white;
+	border-radius: 16px;
+	padding: 46px;
+
+	@media (max-width: 1429px) {
+		flex-basis: 50%;
+	}
+
+	@media (max-width: 1023px) {
+		padding: 28px 21px;
+	}
+
+
+	.title {
+		font-size: 48px;
+		font-weight: 700;
+		color: $main-white;
+		line-height: 50px;
+		margin-bottom: 36px;
+
+		@media (max-width: 1919px) {
+			font-size: 36px;
+			line-height: 37px;
+			margin-bottom: 24px;
+		}
+
+		@media (max-width: 1023px) {
+			font-size: 32px;
+		}
+	}
+
+	.subtitle {
+		font-size: 28px;
+		font-weight: 500;
+		color: rgba(255, 255, 255, 0.7);
+		margin-bottom: 60px;
+
+		@media (max-width: 1919px) {
+			font-size: 20px;
+			margin-bottom: 46px;
+		}
+
+		@media (max-width: 1023px) {
+			font-size: 16px;
+		}
+	}
+
+	.searchInput {
+		input {
+			padding: 0 13px 0 21px;
+			height: 45px;
+		}
+	}
+
+	.searchIcon {
+		color: $main-blue;
+		right: 13px;
+
+		svg {
+			width: 18px;
+			height: 18px;
+		}
+	}
+}
+
+.map {
+	position: relative;
+	flex-basis: 60%;
+	height: 100%;
+	border-radius: 16px;
+	overflow: hidden;
+
+	@media (max-width: 1439px) {
+		flex-basis: 50%;
+	}
+}
