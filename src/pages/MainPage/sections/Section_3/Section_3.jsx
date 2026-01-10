@@ -5,8 +5,6 @@ import React from 'react'
 
 import { mapPlag } from '@/assets/images'
 
-import VacanciesCarousel from '@/components/VacanciesCarousel/VacanciesCarousel'
-
 import SearchInput from '@/shared/ui/SearchInput/SearchInput'
 
 import styles from './Section_3.module.scss'
@@ -38,10 +36,6 @@ const Section_3 = () => {
 						style={{ objectFit: 'cover' }}
 					/>
 				</div>
-			</div>
-
-			<div className={styles.catalog}>
-				<VacanciesCarousel />
 			</div>
 		</section>
 	)

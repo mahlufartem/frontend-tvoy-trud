@@ -1,0 +1,204 @@
+.root {
+	width: 100%;
+	overflow: hidden;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 60px 98px 20px 98px;
+
+	@media (max-width: 1439px) {
+		padding: 60px 60px 20px 60px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 60px 20px 20px 20px;
+	}
+}
+
+.title {
+	font-size: 48px;
+	font-weight: 700;
+
+	@media (max-width: 1919px) {
+		font-size: 36px;
+	}
+
+	@media (max-width: 1023px) {
+		font-size: 32px;
+		& span {
+			display: none;
+		}
+	}
+}
+
+.controls {
+	display: flex;
+	gap: 8px;
+}
+
+.controlBtn {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	border: 1px solid #e5e7eb;
+	background: $main-white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: $main-light-blue;
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.viewport {
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	overflow: hidden;
+	margin-top: -10px;
+
+	@media (max-width: 1290px) {
+		flex-direction: column;
+	}
+}
+
+.track {
+	max-width: 100%;
+	display: flex;
+	gap: 16px;
+	overflow-x: auto;
+	padding-top: 87px;
+	padding-left: 98px;
+	scroll-behavior: smooth;
+	cursor: grab;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	@media (max-width: 1919px) {
+		padding-top: 15px;
+	}
+
+	@media (max-width: 1439px) {
+		padding-left: 60px;
+	}
+
+	@media (max-width: 1290px) {
+		padding-left: 0;
+	}
+}
+
+.dragging {
+	cursor: grabbing;
+	scroll-behavior: auto;
+}
+
+.card {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	width: 316px;
+	height: 248px;
+	background: $main-light-blue;
+	border-radius: 16px;
+	padding: 36px 28px;
+	user-select: none;
+
+	@media (max-width: 1919px) {
+		width: 233px;
+		height: 186px;
+		padding: 20px 28px;
+	}
+
+	@media (max-width: 1290px) {
+		width: 288px;
+	}
+}
+
+.image {
+	transition: all 0.3s;
+	cursor: pointer;
+
+	& img {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 268px;
+		width: auto;
+
+		@media (max-width: 1919px) {
+			height: 200px;
+		}
+	}
+
+	@media (max-width: 1919px) {
+	}
+}
+
+.cardTitle {
+	display: flex;
+	justify-content: center;
+	font-size: 28px;
+	font-weight: 700;
+	text-align: center;
+	max-width: 200px;
+	margin: 28px auto 0;
+
+	@media (max-width: 1919px) {
+		font-size: 20px;
+		margin-top: 20px;
+	}
+}
+
+.allVacanciesBtn {
+	display: flex;
+	align-items: flex-end;
+	width: 316px;
+	height: 248px;
+	background-color: $main-blue;
+	border-radius: 16px;
+	padding: 28px 28px 38px;
+	margin-top: 15px;
+	cursor: pointer;
+
+	.footer {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		color: $main-white;
+		font-size: 20px;
+		font-weight: 700;
+
+		@media (max-width: 1290px) {
+			& svg {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: 1919px) {
+		width: 233px;
+		height: 186px;
+	}
+
+	@media (max-width: 1290px) {
+		height: 55px;
+		width: fit-content;
+		padding: 0 26px;
+		margin: 44px auto 0;
+		align-items: center;
+		border-radius: 60px;
+	}
+}
