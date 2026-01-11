@@ -6,6 +6,8 @@ import Section_3 from '@/pages/MainPage/sections/Section_3/Section_3'
 import Section_4 from '@/pages/MainPage/sections/Section_4/Section_4'
 import Section_5 from '@/pages/MainPage/sections/Section_5/Section_5'
 
+import HowItWorks from '@/components/HowItWorks/HowItWorks'
+
 import styles from './MainPage.module.scss'
 
 const MainPage = () => {
@@ -16,6 +18,7 @@ const MainPage = () => {
 			<Section_3 />
 			<Section_4 />
 			<Section_5 />
+			<HowItWorks />
 		</div>
 	)
 }
