@@ -1,0 +1,110 @@
+.root {
+  background: #0b63e5;
+  padding: 60px 0;
+  overflow: hidden;
+
+  @media (max-width: 1023px) {
+    padding: 44px 0;
+  }
+}
+
+.title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  margin-left: 100px;
+  margin-bottom: 44px;
+
+  @media (max-width: 1439px) {
+    margin-left: 60px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 1023px) {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.row {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.track {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+  animation: scroll 200s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.card {
+  width: 358px;
+  background: #fff;
+  border-radius: 999px;
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  user-select: none;
+}
+
+.avatar {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  color: $main-blue;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.city {
+  font-size: 16px;
+  color: $main-light-black;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.amount {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.time {
+  font-size: 16px;
+  color: $main-light-black;
+}

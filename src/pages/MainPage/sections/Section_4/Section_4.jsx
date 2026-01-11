@@ -7,6 +7,7 @@ import { useWindowWidth } from '@/hooks/useWindowWidth'
 
 import { mainBanner2, mainBanner2_mini } from '@/assets/images'
 
+import EarningsMarquee from '@/components/EarningsMarquee/EarningsMarquee'
 import VacanciesCarouselMin from '@/components/VacanciesCarouselMin/VacanciesCarouselMin'
 
 import styles from './Section_4.module.scss'
