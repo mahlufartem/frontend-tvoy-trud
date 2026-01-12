@@ -184,6 +184,13 @@
 	}
 }
 
+
+.withIcon {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+}
+
 .icons {
 	display: flex;
 	margin-bottom: 24px;

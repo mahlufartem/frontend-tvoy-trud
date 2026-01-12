@@ -107,8 +107,13 @@ const HowItWorks = () => {
 
 		stepsRef.current.forEach((step, i) => {
 			if (!step) return
-			const center = step.offsetTop + step.offsetHeight / 2
-			if (progress >= center) index = i
+
+			const ACTIVATION_DELTA = 20
+			const stepTop = step.offsetTop
+
+			if (progress >= stepTop - ACTIVATION_DELTA) {
+				index = i
+			}
 		})
 
 		setActiveIndex(index)
@@ -155,19 +160,24 @@ const HowItWorks = () => {
 								{step.text && <p>{step.text}</p>}
 
 								{step.icons && (
-									<div className={styles.icons}>
-										<Image
-											src={writeTg}
-											alt=''
-										/>
-										<Image
-											src={writeWhatsApp}
-											alt=''
-										/>
+									<div className={styles.withIcon}>
+										<div>
+											<div className={styles.icons}>
+												<Image
+													src={writeTg}
+													alt=''
+												/>
+												<Image
+													src={writeWhatsApp}
+													alt=''
+												/>
+											</div>
+										</div>
+										<button>{step.button}</button>
 									</div>
 								)}
 
-								<button>{step.button}</button>
+								{!step.icons && <button>{step.button}</button>}
 							</div>
 						</div>
 					))}
