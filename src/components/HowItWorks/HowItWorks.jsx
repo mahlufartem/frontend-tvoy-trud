@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
+import { writeTg, writeWhatsApp } from '@/assets/images'
+
 import styles from './HowItWorks.module.scss'
 
 const STEPS = [
@@ -75,10 +77,12 @@ const HowItWorks = () => {
 			const first = stepsRef.current[0]
 			if (!first) return
 
-			const containerTop = containerRef.current.getBoundingClientRect().top
-			const viewportCenter = window.innerHeight * 0.5
+			const ACTIVATION_OFFSET = 140
 
-			const raw = viewportCenter - containerTop - first.offsetTop
+			const containerTop = containerRef.current.getBoundingClientRect().top
+			const activationPoint = ACTIVATION_OFFSET
+
+			const raw = activationPoint - containerTop - first.offsetTop
 
 			const nextProgress = clamp(raw, 0, lineHeight)
 
@@ -141,8 +145,10 @@ const HowItWorks = () => {
 							}`}
 						>
 							<div className={styles.left}>
-								<span className={styles.badge}>{step.label}</span>
-								<h3>{step.title}</h3>
+								<div>
+									<span className={styles.badge}>{step.label}</span>
+									<h3>{step.title}</h3>
+								</div>
 							</div>
 
 							<div className={styles.right}>
@@ -151,16 +157,12 @@ const HowItWorks = () => {
 								{step.icons && (
 									<div className={styles.icons}>
 										<Image
-											src='/images/tg.png'
+											src={writeTg}
 											alt=''
-											width={64}
-											height={64}
 										/>
 										<Image
-											src='/images/wa.png'
+											src={writeWhatsApp}
 											alt=''
-											width={64}
-											height={64}
 										/>
 									</div>
 								)}
