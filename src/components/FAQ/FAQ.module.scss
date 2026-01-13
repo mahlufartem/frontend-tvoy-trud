@@ -1,0 +1,99 @@
+.root {
+  background: #fff;
+  padding: 60px 80px;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    padding: 40px 28px;
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+
+  @media (max-width: 1023px) {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+}
+
+.list {
+  max-width: 920px;
+  margin: 0 auto 60px;
+  text-align: left;
+}
+
+.item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.head {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+
+  @media (max-width: 1023px) {
+    padding: 28px 0;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.question{
+  @media (max-width: 767px) {
+    max-width: 220px;
+  }
+}
+.icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+
+  & svg {
+    @media (max-width: 1023px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.body p {
+  padding-bottom: 32px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $main-light-black;
+  max-width: 700px;
+}
+
+.active .body {
+  max-height: 200px;
+}
+
+.all {
+  padding: 20px 28px;
+  border-radius: 45px;
+  border: none;
+  background: $main-blue;
+  color: $main-white;
+  font-size: 20px;
+  cursor: pointer;
+}

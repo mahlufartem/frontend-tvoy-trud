@@ -7,6 +7,7 @@ import Section_4 from '@/pages/MainPage/sections/Section_4/Section_4'
 import Section_5 from '@/pages/MainPage/sections/Section_5/Section_5'
 import Section_6 from '@/pages/MainPage/sections/Section_6/Section_6'
 import Section_7 from '@/pages/MainPage/sections/Section_7/Section_7'
+import Section_8 from '@/pages/MainPage/sections/Section_8/Section_8'
 
 import styles from './MainPage.module.scss'
 
@@ -20,6 +21,7 @@ const MainPage = () => {
 			<Section_5 />
 			<Section_6 />
 			<Section_7 />
+			<Section_8 />
 		</div>
 	)
 }
