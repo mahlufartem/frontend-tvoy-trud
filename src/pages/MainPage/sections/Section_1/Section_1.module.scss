@@ -1,15 +1,23 @@
 .root {
+	min-height: 690px;
+
+	:global(.swiper-pagination) {
+		bottom: 40px;
+
+	}
+
 	.swiper {
+		width: 100%;
+		height: 100%;
 	}
 
 	.banner {
 		display: flex;
-		height: 690px;
+		min-height: 690px;
 		position: relative;
 		overflow: hidden;
 
 		@media (min-width: 1440px) {
-			height: 720px;
 		}
 
 		@media (max-width: 1023px) {
@@ -24,15 +32,174 @@
 	}
 
 	.left {
+		flex: 2;
+		position: relative;
+		z-index: 5;
+		display: flex;
+		flex-direction: column;
 		width: 100%;
-		height: 400px;
+		height: 100%;
+		padding: 120px 0 60px 98px;
+
+		@media (min-width: 1440px) {
+			padding-top: 150px;
+		}
+
+		@media (max-width: 1023px) {
+			padding-top: 90px;
+			padding-left: 0;
+			padding-bottom: 70px;
+		}
+
+		@media (max-width: 767px) {
+			padding-bottom: 28px;
+		}
+	}
+
+	.header {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		margin-bottom: 44px;
+
+		@media (max-width: 1440px) {
+			gap: 24px;
+			margin-bottom: 40px;
+		}
+
+		@media (max-width: 1023px) {
+			order: 2;
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 24px;
+		}
+
+		& span {
+			font-size: 20px;
+			font-weight: 700;
+			color: $main-blue;
+
+			@media (max-width: 1023px) {
+				display: none;
+			}
+		}
+
+		& h3 {
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 40px;
+
+			@media (max-width: 1023px) {
+				font-size: 32px;
+				line-height: 32px;
+			}
+		}
+	}
+
+	.advantages {
+		display: flex;
+		flex-direction: column;
+		gap: 27px;
+		flex-wrap: wrap;
+		max-width: 400px;
+		margin-bottom: 68px;
+
+		@media (max-width: 1440px) {
+			gap: 24px;
+			margin-bottom: 50px;
+		}
+
+		@media (max-width: 1023px) {
+			max-width: 100%;
+			order: 3;
+		}
+
+		@media (max-width: 767px) {
+			gap: 14px;
+		}
+	}
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 767px) {
+			flex-direction: column;
+			gap: 14px;
+		}
+	}
+
+	.advantage {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		width: 100%;
+
+		& span {
+			font-size: 16px;
+		}
+
+		@media (max-width: 767px) {
+			& br {
+				display: none;
+			}
+		}
+	}
+
+	.getWork {
+		width: fit-content;
+		padding: 20px 33px;
+		background-color: $main-blue;
+		border-radius: 45px;
+		border: none;
+		outline: none;
+		color: $main-white;
+		font-size: 20px;
+		font-weight: 500;
+		text-align: center;
+		margin-bottom: 32px;
+		cursor: pointer;
+
+		@media (max-width: 1023px) {
+			width: 100%;
+			font-size: 18px;
+			order: 4;
+			margin-bottom: 0;
+		}
+	}
+
+	.apps {
+		display: flex;
+		gap: 14px;
+		margin-top: auto;
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 13px;
+			border-radius: 10px;
+			background: $main-white;
+		}
+
+		@media (max-width: 1023px) {
+			margin-bottom: 40px;
+			order: 1;
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 24px;
+		}
 	}
 
 	.right {
-		width: 100%;
+		flex: 1;
 		position: relative;
+		width: 300px;
 
 		@media (max-width: 1023px) {
+			width: 100%;
 		}
 
 		@media (max-width: 767px) {
@@ -42,7 +209,7 @@
 	.formImage {
 		position: absolute;
 		right: -170px;
-		top: 0;
+		top: -20px;
 		z-index: 0;
 
 		& img {
@@ -137,21 +304,20 @@
 
 			@media (min-width: 1400px) {
 				font-size: 44px;
-
 			}
 		}
 
 		@media (min-width: 1023px) {
 			position: absolute;
-			left: 0;
+			left: -300px;
 			width: fit-content;
 			height: fit-content;
-			bottom: 112px;
+			bottom: 140px;
 		}
 
 		@media (min-width: 1400px) {
-		left: -70px;
-
+			left: -400px;
+			bottom: 112px;
 		}
 		@media (min-width: 1600px) {
 		}

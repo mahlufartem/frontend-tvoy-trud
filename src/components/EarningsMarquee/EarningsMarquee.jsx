@@ -18,7 +18,9 @@ const users = Array.from({ length: 8 }).map((_, i) => ({
 export default function EarningsMarquee() {
 	return (
 		<section className={styles.root}>
-			<h2 className={styles.title}>С нами зарабатывают</h2>
+			<h2 className={styles.title}>
+				С нами <br /> зарабатывают
+			</h2>
 
 			<div className={styles.marquee}>
 				{[0, 1, 2].map(row => (

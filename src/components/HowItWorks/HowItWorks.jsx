@@ -5,31 +5,9 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import { writeTg, writeWhatsApp } from '@/assets/images'
 
-import styles from './HowItWorks.module.scss'
+import { STEPS } from '@/components/HowItWorks/data'
 
-const STEPS = [
-	{
-		id: 1,
-		label: 'Способ 1',
-		title: 'Зарегистрируйтесь',
-		text: 'Выберите подходящую вам работу с удобным графиком',
-		button: 'Зарегистрироваться'
-	},
-	{
-		id: 2,
-		label: 'Способ 2',
-		title: 'Позвоните нам или напишите в Telegram, WhatsApp',
-		button: 'Позвонить нам',
-		icons: true
-	},
-	{
-		id: 3,
-		label: 'Способ 3',
-		title: 'Запишитесь на онлайн собеседование',
-		text: 'Расскажем о формате работы, подберем вакансию и оформим документы',
-		button: 'Записаться'
-	}
-]
+import styles from './HowItWorks.module.scss'
 
 const clamp = (v, min, max) => Math.min(Math.max(v, min), max)
 
@@ -61,7 +39,6 @@ const HowItWorks = () => {
 		return () => window.removeEventListener('resize', calcHeight)
 	}, [])
 
-	/* scroll → requestAnimationFrame */
 	useEffect(() => {
 		const onScroll = () => {
 			scrollY.current = window.scrollY
@@ -139,7 +116,6 @@ const HowItWorks = () => {
 					/>
 				</div>
 
-				{/* ШАГИ */}
 				<div className={styles.steps}>
 					{STEPS.map((step, index) => (
 						<div

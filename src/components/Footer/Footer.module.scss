@@ -201,6 +201,13 @@
 			display: none;
 		}
 	}
+
+	@media (max-width: 767px) {
+
+		br {
+			display: block;
+		}
+	}
 }
 
 .divider {
