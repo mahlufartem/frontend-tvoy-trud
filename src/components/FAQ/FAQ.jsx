@@ -10,7 +10,7 @@ import { faq } from '@/components/FAQ/data'
 import styles from './FAQ.module.scss'
 
 const FAQ = () => {
-	const [activeId, setActiveId] = useState(1)
+	const [activeId, setActiveId] = useState(null)
 
 	const toggle = id => {
 		setActiveId(prev => (prev === id ? null : id))
