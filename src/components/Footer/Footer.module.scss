@@ -10,13 +10,13 @@
 		padding: 48px 60px 24px 60px;
 	}
 
-  @media (max-width: 1023px) {
-    max-width: 100%;
-  }
+	@media (max-width: 1023px) {
+		max-width: 100%;
+	}
 
-  @media (max-width: 767px) {
-    padding: 48px 20px 24px 20px;
-  }
+	@media (max-width: 767px) {
+		padding: 48px 20px 24px 20px;
+	}
 }
 
 .top {
@@ -88,6 +88,12 @@
 		display: flex;
 		align-items: center;
 		gap: 10px;
+
+		@media (max-width: 1023px) {
+			& svg {
+				display: none;
+			}
+		}
 	}
 
 	.mail {
@@ -103,6 +109,22 @@
 			border-radius: 50%;
 			background: #eaeaea;
 			display: block;
+		}
+	}
+
+	.socialsMobile {
+		display: none;
+
+		@media (max-width: 1023px) {
+			display: flex;
+			gap: 10px;
+
+			& svg {
+				width: 36px;
+				height: 36px;
+				cursor: pointer;
+			}
+
 		}
 	}
 
@@ -142,11 +164,11 @@
 		flex: 1;
 		justify-content: space-between;
 
-      @media (max-width: 1023px) {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
+		@media (max-width: 1023px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+		}
 	}
 
 	ul {
@@ -171,9 +193,9 @@
 	flex-direction: column;
 	align-items: flex-end;
 	flex: 1;
-	gap: 28px;
+	gap: 20px;
 	margin-top: auto;
-
+	color: $main-light-black;
 	div {
 		display: flex;
 		align-items: center;
@@ -203,7 +225,6 @@
 	}
 
 	@media (max-width: 767px) {
-
 		br {
 			display: block;
 		}
@@ -215,9 +236,9 @@
 	border-top: 1px solid $main-light-black;
 	opacity: 0.6;
 
-  @media (max-width: 1023px) {
-    margin-top: 45px;
-  }
+	@media (max-width: 1023px) {
+		margin-top: 45px;
+	}
 }
 
 .bottom {
@@ -229,10 +250,10 @@
 	color: $main-light-black;
 	padding: 44px 0;
 
-  @media (max-width: 1023px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 0;
-  }
+	@media (max-width: 1023px) {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 40px 0;
+	}
 }

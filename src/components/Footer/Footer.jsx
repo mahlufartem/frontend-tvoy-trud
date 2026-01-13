@@ -42,6 +42,11 @@ const Footer = () => {
 							<div className={styles.mail}>
 								<a href='mailto:tvojtrud@gmail.com'>tvojtrud@gmail.com</a>
 							</div>
+
+							<div className={styles.socialsMobile}>
+								<WhatsAppIcon />
+								<TelegramIcon />
+							</div>
 						</div>
 					</div>
 
