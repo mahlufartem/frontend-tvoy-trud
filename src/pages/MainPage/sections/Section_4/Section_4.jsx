@@ -16,7 +16,7 @@ const Section_4 = () => {
 	const width = useWindowWidth()
 
 	return (
-		<div className={styles.root}>
+		<section className={styles.root}>
 			<VacanciesCarouselMin />
 			<div className={styles.bannerWrapper}>
 				<div className={styles.banner}>
@@ -39,7 +39,7 @@ const Section_4 = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 
