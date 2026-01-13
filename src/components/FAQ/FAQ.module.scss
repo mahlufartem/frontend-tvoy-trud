@@ -18,6 +18,9 @@
     margin-bottom: 40px;
   }
 
+  @media (max-width: 767px) {
+    margin-bottom: 28px;
+  }
 }
 
 .list {
