@@ -1,0 +1,28 @@
+.root {
+  background-color: $main-light-blue;
+  padding-top: 160px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  padding: 0 98px;
+
+  @media (min-width: 1440px) {
+    padding: 0 130px;
+  }
+
+  @media (max-width: 1439px) {
+    //padding: 0 60px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
+
+.filters {}
+
+.list {
+  flex: 1;
+}

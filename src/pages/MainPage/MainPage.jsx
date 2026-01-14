@@ -13,7 +13,7 @@ import styles from './MainPage.module.scss'
 
 const MainPage = () => {
 	return (
-		<div className={styles.root}>
+		<main className={styles.root}>
 			<Section_1 />
 			<Section_2 />
 			<Section_3 />
@@ -22,7 +22,7 @@ const MainPage = () => {
 			<Section_6 />
 			<Section_7 />
 			<Section_8 />
-		</div>
+		</main>
 	)
 }
 
