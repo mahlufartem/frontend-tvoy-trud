@@ -56,7 +56,7 @@ const ReviewsCarousel = () => {
 			<div className={styles.header}>
 				<h2>Отзывы о работе с нами</h2>
 				<div className={styles.actions}>
-					<button className={styles.all}>Смотреть все отзывы</button>
+					{/*<button className={styles.all}>Смотреть все отзывы</button>*/}
 					<div className={styles.arrows}>
 						<button onClick={() => scroll(-1)}>
 							<ArrowLeftRoundedIcon />
@@ -96,9 +96,9 @@ const ReviewsCarousel = () => {
 						</article>
 					))}
 				</div>
-				<div className={styles.allMobileWrapper}>
-					<button className={styles.allMobile}>Смотреть все отзывы</button>
-				</div>
+				{/*<div className={styles.allMobileWrapper}>*/}
+				{/*	<button className={styles.allMobile}>Смотреть все отзывы</button>*/}
+				{/*</div>*/}
 			</div>
 		</section>
 	)

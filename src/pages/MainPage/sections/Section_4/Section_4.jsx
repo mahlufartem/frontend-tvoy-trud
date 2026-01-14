@@ -29,7 +29,7 @@ const Section_4 = () => {
 								Заполните анкету, мы позвоним вам и поможем с выбором
 							</p>
 						</div>
-						<button className={styles.btn}> Зыполните анкету</button>
+						<button className={styles.btn}> Заполните анкету</button>
 					</div>
 					<div className={styles.image}>
 						<Image
