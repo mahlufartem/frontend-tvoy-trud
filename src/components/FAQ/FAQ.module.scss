@@ -58,6 +58,8 @@
 }
 
 .question {
+  color: $main-black;
+
   @media (max-width: 767px) {
     max-width: 220px;
   }
