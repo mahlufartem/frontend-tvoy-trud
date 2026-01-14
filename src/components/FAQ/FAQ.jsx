@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 
-import CloseRoundedIcon from '@/assets/icons/CloseRoundedIcon'
 import CrossRoundedIcon from '@/assets/icons/CrossRoundedIcon'
 
 import { faq } from '@/components/FAQ/data'
@@ -32,16 +31,19 @@ const FAQ = () => {
 							<button
 								className={styles.head}
 								onClick={() => toggle(item.id)}
+								aria-expanded={isActive}
 							>
 								<span className={styles.question}>{item.question}</span>
 
-								<div className={styles.icon}>
-									{isActive ? <CloseRoundedIcon /> : <CrossRoundedIcon />}
-								</div>
+								<span className={styles.icon}>
+									<CrossRoundedIcon />
+								</span>
 							</button>
 
 							<div className={styles.body}>
-								<p>{item.answer}</p>
+								<div className={styles.bodyInner}>
+									<p>{item.answer}</p>
+								</div>
 							</div>
 						</div>
 					)
