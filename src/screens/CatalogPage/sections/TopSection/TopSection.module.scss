@@ -6,7 +6,7 @@
 	}
 
 	@media (max-width: 1439px) {
-		//padding: 0 98px;
+		padding: 0 60px;
 	}
 
 	@media (max-width: 767px) {
@@ -29,6 +29,19 @@
 		height: 55px;
 		border: 1px solid $main-light-black;
 		background-color: transparent;
+
+		@media (max-width: 1023px) {
+			height: 44px;
+			padding: 20px 20px 20px 56px;
+			font-size: 16px;
+		}
+	}
+
+	& svg {
+		@media (max-width: 1023px) {
+			width: 18px;
+			height: 18px;
+		}
 	}
 }
 
@@ -53,9 +66,13 @@
 	}
 
 	.cityBtn {
-		border: 1px solid $main-light-black;
-		background-color: transparent;
+		background-color: $main-white;
 		color: $main-light-black;
+
+		@media (max-width: 1023px) {
+			height: 44px;
+			padding: 20px;
+		}
 	}
 
 	.searchBtn {
@@ -64,15 +81,17 @@
 		justify-content: center;
 		text-align: center;
 
-		transition: background-color .3s;
+		transition: background-color 0.3s;
 
 		&:hover {
 			background-color: #3e88e8;
 		}
+
+		@media (max-width: 1023px) {
+			display: none;
+		}
 	}
 }
-
-
 
 .viewGroup {
 	display: flex;
@@ -102,7 +121,7 @@
 	opacity: 0.5;
 	cursor: pointer;
 	background-color: transparent;
-	transition: all .3s;
+	transition: all 0.3s;
 }
 
 .active {
