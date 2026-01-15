@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { vacancies } from '@/components/VacanciesCarousel/data'
+import { vacancyList } from '@/screens/CatalogPage/data'
 
 export async function generateStaticParams() {
 	// В дальнейшем заменить на реальный запрос списка вакансий
-	return vacancies.map(vac => ({
+	return vacancyList.map(vac => ({
 		id: vac.id
 	}))
 }
