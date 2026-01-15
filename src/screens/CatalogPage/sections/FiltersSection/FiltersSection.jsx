@@ -49,28 +49,28 @@ const FiltersSection = () => {
 				</div>
 			</div>
 
-			<div className={styles.filterBlock}>
-				<h3 className={styles.filterTitle}>Время</h3>
-				<div className={styles.timeRange} />
-			</div>
+			{/*<div className={styles.filterBlock}>*/}
+			{/*	<h3 className={styles.filterTitle}>Время</h3>*/}
+			{/*	<div className={styles.timeRange} />*/}
+			{/*</div>*/}
 
-			<div className={styles.filterAccordion}>
-				<h3 className={styles.filterTitle}>Торговые бренды</h3>
-				<div className={styles.checkboxList} />
-			</div>
+			{/*<div className={styles.filterAccordion}>*/}
+			{/*	<h3 className={styles.filterTitle}>Торговые бренды</h3>*/}
+			{/*	<div className={styles.checkboxList} />*/}
+			{/*</div>*/}
 
-			<div className={styles.filterAccordion}>
-				<h3 className={styles.filterTitle}>Тип заказа</h3>
-			</div>
+			{/*<div className={styles.filterAccordion}>*/}
+			{/*	<h3 className={styles.filterTitle}>Тип заказа</h3>*/}
+			{/*</div>*/}
 
-			<div className={styles.filterAccordion}>
-				<h3 className={styles.filterTitle}>Станции метро</h3>
-			</div>
+			{/*<div className={styles.filterAccordion}>*/}
+			{/*	<h3 className={styles.filterTitle}>Станции метро</h3>*/}
+			{/*</div>*/}
 
-			<div className={styles.filterActions}>
-				<button className={styles.applyButton}>Применить</button>
-				<button className={styles.resetButton}>Сбросить</button>
-			</div>
+			{/*<div className={styles.filterActions}>*/}
+			{/*	<button className={styles.applyButton}>Применить</button>*/}
+			{/*	<button className={styles.resetButton}>Сбросить</button>*/}
+			{/*</div>*/}
 		</section>
 	)
 }

@@ -1,6 +1,6 @@
 export const vacancyList = [
 	{
-		id: 1,
+		id: '1',
 		title: 'Работник торгового зала / продавец',
 		info: {
 			logo: '',
@@ -14,7 +14,7 @@ export const vacancyList = [
 		}
 	},
 	{
-		id: 2,
+		id: '2',
 		title: 'Работник торгового зала / продавец',
 		info: {
 			logo: '',
@@ -28,7 +28,7 @@ export const vacancyList = [
 		}
 	},
 	{
-		id: 3,
+		id: '3',
 		title: 'Работник торгового зала / продавец',
 		info: {
 			logo: '',
@@ -42,7 +42,7 @@ export const vacancyList = [
 		}
 	},
 	{
-		id: 4,
+		id: '4',
 		title: 'Работник торгового зала / продавец',
 		info: {
 			logo: '',

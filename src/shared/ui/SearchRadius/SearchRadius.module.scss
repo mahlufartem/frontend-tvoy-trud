@@ -5,24 +5,24 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 14px;
+  gap: 22px;
+  margin-bottom: 12px;
 }
 
 .title {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .value {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 400;
   color: $main-blue;
 }
 
 .range {
   width: 100%;
-  height: 8px;
+  height: 6px;
   border-radius: 4px;
   appearance: none;
   outline: none;
@@ -31,8 +31,8 @@
 
   &::-webkit-slider-thumb {
     appearance: none;
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: $main-blue;
     border: none;
