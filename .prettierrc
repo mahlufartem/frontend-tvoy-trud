@@ -16,7 +16,7 @@
     "^@/api(.*)$",
     "^@/config(.*)$",
     "^@/utils(.*)$",
-    "^@/pages(.*)$",
+    "^@/screens(.*)$",
     "^@/providers(.*)$",
     "^@/store(.*)$",
     "^@/assets(.*)$",

@@ -1,0 +1,18 @@
+.root {
+  flex-basis: 40%;
+}
+
+.filterBlock {
+  margin-bottom: 40px;
+
+  .filterTitle {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 40px;
+}

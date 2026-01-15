@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CatalogPage from '@/pages/CatalogPage/CatalogPage'
+import CatalogPage from '@/screens/CatalogPage/CatalogPage'
 
 const Page = () => {
 	return <CatalogPage />
