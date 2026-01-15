@@ -1,0 +1,61 @@
+.root {
+  border-radius: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.value {
+  font-size: 22px;
+  font-weight: 400;
+  color: $main-blue;
+}
+
+.range {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 12px;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: $main-blue;
+    border: none;
+    box-shadow: 0 2px 8px rgba(10, 91, 255, 0.4);
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: $main-blue;
+    border: none;
+    cursor: pointer;
+  }
+
+  &::-moz-range-track {
+    background: transparent;
+  }
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+}
