@@ -1,9 +1,8 @@
 import React from 'react'
 
-import CategoriesSection from '@/pages/CatalogPage/sections/CategoriesSection/CategoriesSection'
-import TopSection from '@/pages/CatalogPage/sections/TopSection/TopSection'
-
 import styles from './CatalogPage.module.scss'
+import CategoriesSection from '@/screens/CatalogPage/sections/CategoriesSection/CategoriesSection'
+import TopSection from '@/screens/CatalogPage/sections/TopSection/TopSection'
 
 const CatalogPage = () => {
 	return (

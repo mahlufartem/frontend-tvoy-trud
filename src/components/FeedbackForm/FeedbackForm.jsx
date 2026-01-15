@@ -21,8 +21,8 @@ const FeedbackForm = () => {
 			onSubmit={onSubmit}
 		>
 			<div className={styles.title}>
-				Остались вопросы? <br />
-				Свяжитесь с нами!
+				<span>Остались вопросы?</span> <br />
+				<span>Свяжитесь с нами!</span>
 			</div>
 			<div className={styles.inputsGroup}>
 				<div className={styles.row}>
