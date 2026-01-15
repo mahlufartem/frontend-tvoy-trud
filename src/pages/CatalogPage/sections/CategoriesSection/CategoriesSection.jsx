@@ -1,12 +1,17 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 
 import clsx from 'clsx'
 
-import { categories } from '@/pages/CatalogPage/sections/CategoriesSection/data'
-
 import styles from './CategoriesSection.module.scss'
+
+const categories = [
+	{ id: 1, title: 'Продавец' },
+	{ id: 2, title: 'Грузчик' },
+	{ id: 3, title: 'Кассир' },
+	{ id: 4, title: 'Упаковщик' }
+]
 
 const CategoriesSection = () => {
 	const trackRef = useRef(null)
