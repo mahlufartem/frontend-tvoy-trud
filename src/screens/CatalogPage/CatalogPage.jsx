@@ -15,7 +15,9 @@ const CatalogPage = () => {
 			<TopSection />
 			<CategoriesSection />
 			<div className={styles.content}>
-				<FiltersSection />
+				<div className={styles.desctopFilters}>
+					<FiltersSection />
+				</div>
 				<section className={styles.list}>
 					{vacancyList.map(vacancy => (
 						<CatalogCard
