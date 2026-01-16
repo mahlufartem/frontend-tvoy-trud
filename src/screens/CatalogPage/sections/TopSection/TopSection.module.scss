@@ -93,6 +93,7 @@
 			width: 44px;
 			height: 44px;
 			border: 1px solid $main-black;
+			color: $main-black;
 			border-radius: 50%;
 			background-color: transparent;
 			outline: none;
@@ -120,12 +121,11 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 35px;
-
+	color: $main-black;
 
 	@media (max-width: 1023px) {
 		margin-bottom: 28px;
 	}
-
 }
 
 .title {
