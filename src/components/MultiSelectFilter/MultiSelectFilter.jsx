@@ -2,6 +2,8 @@
 
 import React, { useMemo, useState } from 'react'
 
+import ArrowDownIcon from '@/assets/icons/ArrowDownIcon'
+
 import styles from './MultiSelectFilter.module.scss'
 
 const MultiSelectFilter = ({
@@ -51,7 +53,9 @@ const MultiSelectFilter = ({
 				className={styles.header}
 				onClick={onToggle}
 			>
-				<div className={`${styles.arrow} ${isOpen ? styles.open : ''}`} />
+				<div className={`${styles.arrow} ${isOpen ? styles.open : ''}`}>
+					<ArrowDownIcon />
+				</div>
 				<span className={styles.title}>{title}</span>
 			</div>
 
