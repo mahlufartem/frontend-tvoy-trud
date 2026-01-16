@@ -25,6 +25,7 @@
   background-color: $main-light-blue;
   transform: translateX(100%);
   transition: transform 0.5s ease;
+  overflow-y: auto;
   z-index: 100;
   padding: 20px 60px;
 

@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect } from 'react'
 
 import clsx from 'clsx'
 
@@ -12,6 +14,29 @@ import styles from './CatalogFiltersMobile.module.scss'
 
 const CatalogFiltersMobile = () => {
 	const { isMobileFiltersOpen, toggleMobileFilters } = useCatalogFiltersStore()
+
+	// Блокировка скролла при открытии фильтров
+	useEffect(() => {
+		if (isMobileFiltersOpen) {
+			// Сохраняем текущую позицию скролла
+			const scrollY = window.scrollY
+
+			// Блокируем скролл
+			document.body.style.position = 'fixed'
+			document.body.style.top = `-${scrollY}px`
+			document.body.style.width = '100%'
+			document.body.style.overflow = 'hidden'
+
+			return () => {
+				// Разблокируем скролл и восстанавливаем позицию
+				document.body.style.position = ''
+				document.body.style.top = ''
+				document.body.style.width = ''
+				document.body.style.overflow = ''
+				window.scrollTo(0, scrollY)
+			}
+		}
+	}, [isMobileFiltersOpen])
 
 	return (
 		<div
