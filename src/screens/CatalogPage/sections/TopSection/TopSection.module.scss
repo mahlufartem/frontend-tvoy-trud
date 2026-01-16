@@ -161,6 +161,7 @@
 	cursor: pointer;
 	background-color: transparent;
 	transition: all 0.3s;
+	color: $main-black;
 
 	@media (max-width: 1023px) {
 		width: 100%;
@@ -168,6 +169,7 @@
 }
 
 .active {
+	color: $main-black;
 	opacity: 1;
 	border: 1px solid $main-black;
 }
