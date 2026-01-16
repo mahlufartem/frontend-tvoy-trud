@@ -2,20 +2,44 @@
 }
 
 .filterBlock {
-  margin-bottom: 40px;
+	margin-bottom: 40px;
 
-  .filterTitle {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 14px;
-  }
+	.filterTitle {
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 14px;
+	}
 }
 
 .row {
-  display: flex;
-  gap: 40px;
+	display: flex;
+	gap: 40px;
 
-  @media (max-width: 1439px) {
-   flex-direction: column;
+	@media (max-width: 1439px) {
+		flex-direction: column;
+	}
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  button {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $main-blue;
+    border: 1px solid $main-blue;
+    border-radius: 45px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+
+    &:last-child {
+      color: $main-black;
+      border: 1px solid $main-black;
+    }
   }
 }

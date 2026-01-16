@@ -8,7 +8,6 @@ export const useCatalogFiltersStore = create((set, get) => ({
 		set(state => ({ isMobileFiltersOpen: !state.isMobileFiltersOpen })),
 
 	/* ---------------- accordion ---------------- */
-
 	openAccordions: {}, // { brands: true, metro: true }
 
 	isAccordionOpen: key => Boolean(get().openAccordions[key]),
@@ -39,12 +38,14 @@ export const useCatalogFiltersStore = create((set, get) => ({
 			}
 		})),
 
-	resetFilters: () =>
+	resetFilters: () => {
 		set({
 			filters: {
 				brands: [],
 				metro: [],
 				orderTypes: []
-			}
+			},
+			openAccordions: {}
 		})
+	}
 }))

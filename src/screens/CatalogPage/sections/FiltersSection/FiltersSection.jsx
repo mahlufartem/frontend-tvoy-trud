@@ -21,7 +21,7 @@ const brands = [
 	{ id: 5, label: 'Пятёрочка' }
 ]
 
-const order_type = [
+const orderTypes = [
 	{ id: 21, label: 'Тип заказа 1' },
 	{ id: 22, label: 'Тип заказа 2' },
 	{ id: 23, label: 'Тип заказа 3' },
@@ -34,10 +34,9 @@ const FiltersSection = () => {
 	const [startTime, setStartTime] = useState('09:00')
 	const [endTime, setEndTime] = useState('09:00')
 
-	const { isAccordionOpen, toggleAccordion, filters, setFilter } =
+	const { isAccordionOpen, toggleAccordion, filters, setFilter, resetFilters } =
 		useCatalogFiltersStore()
 
-	console.log(filters)
 	return (
 		<section className={styles.root}>
 			<div className={styles.filterBlock}>
@@ -86,12 +85,17 @@ const FiltersSection = () => {
 			<div className={styles.filterBlock}>
 				<MultiSelectFilter
 					title='Тип заказа'
-					items={order_type}
+					items={orderTypes}
 					value={filters.orderTypes}
 					onChange={v => setFilter('orderTypes', v)}
 					isOpen={isAccordionOpen('orderTypes')}
 					onToggle={() => toggleAccordion('orderTypes')}
 				/>
+			</div>
+
+			<div className={styles.footer}>
+				<button>Взять заказ</button>
+				<button onClick={resetFilters}>Сбросить</button>
 			</div>
 		</section>
 	)
