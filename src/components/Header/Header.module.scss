@@ -2,12 +2,9 @@
 	position: fixed;
 	width: 100%;
 	height: 116px;
-	padding: 0 130px;
+	padding: 0 98px;
 	z-index: 10;
 
-	@media (max-width: 1919px) {
-		padding: 0 98px;
-	}
 
 	.wrapper {
 		display: flex;
@@ -124,12 +121,11 @@
 		}
 	}
 
-	@media (max-width: 1440px) {
-		height: 87px;
-		padding: 0 98px;
+	@media (min-width: 1440px) {
+		padding: 0 130px;
 	}
 
-	@media (max-width: 1023px) {
+	@media (max-width: 1439px) {
 		height: 87px;
 		padding: 0 60px;
 	}

@@ -4,9 +4,14 @@ import React, { useState } from 'react'
 
 import clsx from 'clsx'
 
+import { useCatalogFiltersStore } from '@/store/catalogFiltersStore'
+
 import ArrowDownIcon from '@/assets/icons/ArrowDownIcon'
+import FiltersIcon from '@/assets/icons/FiltersIcon'
 import ListIcon from '@/assets/icons/ListIcon'
 import MapIcon from '@/assets/icons/MapIcon'
+
+import CatalogFiltersMobile from '@/components/CatalogFiltersMobile/CatalogFiltersMobile'
 
 import SearchInput from '@/shared/ui/SearchInput/SearchInput'
 
@@ -14,6 +19,7 @@ import styles from './TopSection.module.scss'
 
 const TopSection = () => {
 	const [view, setView] = useState('list')
+	const { isMobileFiltersOpen, toggleMobileFilters } = useCatalogFiltersStore()
 
 	return (
 		<section className={styles.root}>
@@ -25,6 +31,12 @@ const TopSection = () => {
 					<button className={styles.cityBtn}>
 						<span>г. Ярославль</span>
 						<ArrowDownIcon />
+					</button>
+					<button
+						className={styles.filtersToggle}
+						onClick={toggleMobileFilters}
+					>
+						<FiltersIcon />
 					</button>
 					<button className={styles.searchBtn}>Найти</button>
 				</div>
@@ -47,6 +59,7 @@ const TopSection = () => {
 					</button>
 				</div>
 			</div>
+			<CatalogFiltersMobile />
 		</section>
 	)
 }

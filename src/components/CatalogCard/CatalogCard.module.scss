@@ -1,72 +1,117 @@
 .root {
-  width: 100%;
-  background-color: $main-white;
-  padding: 40px;
-  border-radius: 44px;
+	width: 100%;
+	background-color: $main-white;
+	border-radius: 33px;
+	padding: 28px;
 
-  .cardTitle {
-    display: block;
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
+	@media (min-width: 1440px) {
+		padding: 40px;
+		border-radius: 44px;
+	}
 
-  .cardInfo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 38px;
-  }
+	@media (max-width: 1023px) {
+		padding: 20px;
+	}
 
-  .cardLogo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #3e88e8;
-  }
+	.cardTitle {
+		display: block;
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 20px;
 
-  .cardMeta {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-    font-size: 16px;
-    color: $main-light-black;
-  }
+		@media (max-width: 1023px) {
+			font-size: 18px;
+		}
+	}
 
-  .showOnMap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: $main-blue;
-    font-weight: 500;
-  }
+	.cardInfo {
+		display: flex;
+		//align-items: center;
+		gap: 20px;
+		margin-bottom: 38px;
+	}
 
-  .cardFooter {
-    display: flex;
-    justify-content: space-between;
-  }
+	.cardLogo {
+		width: 53px;
+		height: 53px;
+		border-radius: 50%;
+		background-color: #3e88e8;
 
-  .cardPrice {
-    display: flex;
-    flex-direction: column;
+		@media (min-width: 1440px) {
+			width: 70px;
+			height: 70px;
+		}
 
-    & strong {
-      font-size: 22px;
-    }
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
 
-    & span {
-      font-size: 16px;
-      color: $main-light-black;
-    }
-  }
+	.cardMeta {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		font-size: 16px;
+		color: $main-light-black;
+	}
 
-  .takeOrder {
-    border: none;
-    outline: none;
-    border-radius: 45px;
-    padding: 20px 60px;
-    background-color: $main-blue;
-    color: $main-white;
-  }
+	.showOnMap {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: $main-blue;
+		font-weight: 500;
+	}
+
+	.cardFooter {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 767px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.cardPrice {
+		display: flex;
+		flex-direction: column;
+
+
+      @media (max-width: 767px) {
+        align-self: flex-start;
+        margin-bottom: 20px;
+      }
+
+		& strong {
+			font-size: 22px;
+
+			@media (max-width: 1023px) {
+				font-size: 18px;
+			}
+		}
+
+		& span {
+			font-size: 16px;
+			color: $main-light-black;
+
+			@media (max-width: 1023px) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.takeOrder {
+		border: none;
+		outline: none;
+		border-radius: 45px;
+		padding: 20px 60px;
+		background-color: $main-blue;
+		color: $main-white;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+	}
 }

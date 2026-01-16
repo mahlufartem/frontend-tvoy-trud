@@ -1,0 +1,48 @@
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 20;
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $main-light-blue;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  z-index: 100;
+  padding: 20px 60px;
+
+  @media (max-width: 1023px) {
+    padding: 20px;
+  }
+
+}
+
+.menuOpen {
+  transform: translateX(0);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+
+}

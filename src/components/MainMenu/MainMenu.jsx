@@ -23,7 +23,7 @@ import SearchInput from '@/shared/ui/SearchInput/SearchInput'
 import styles from './MainMenu.module.scss'
 
 const MainMenu = () => {
-	const { isMenuOpen, toggleMenu } = useMainMenuStore()
+	const { isMenuOpen, closeMenu, toggleMenu } = useMainMenuStore()
 
 	return (
 		<div
@@ -42,6 +42,7 @@ const MainMenu = () => {
 					<Link
 						href={APP_ROUTES.primary.catalog}
 						className={styles.catalogLink}
+						onClick={closeMenu}
 					>
 						<Button>Каталог вакансий</Button>
 					</Link>

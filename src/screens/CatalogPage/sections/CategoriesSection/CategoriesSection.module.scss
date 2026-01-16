@@ -1,68 +1,69 @@
 .root {
-  padding-left: 98px;
-  margin-bottom: 44px;
+	padding-left: 98px;
+	margin-bottom: 44px;
 
-  display: flex;
+	display: flex;
 
-  @media (min-width: 1440px) {
-    padding-left: 130px;
-  }
+	@media (min-width: 1440px) {
+		padding-left: 130px;
+	}
 
-  @media (max-width: 1439px) {
-    //padding: 0 60px;
-  }
+	@media (max-width: 1439px) {
+		//padding: 0 60px;
+	}
 
-  @media (max-width: 767px) {
-    padding-left: 20px;
-  }
+	@media (max-width: 767px) {
+		padding-left: 20px;
+	}
 }
 
 .viewport {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .track {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 8px;
+	display: flex;
+	gap: 24px;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	padding-bottom: 8px;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .dragging {
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: transparent;
-  border-radius: 45px;
-  padding: 16px 26px;
-  border: 1px solid $main-blue;
-  color: $main-blue;
-  user-select: none;
-  cursor: pointer;
-  font-size: 18px;
-  transition: all .4s;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background: transparent;
+	border-radius: 45px;
+	padding: 16px 26px;
+	border: 1px solid $main-blue;
+	color: $main-blue;
+	user-select: none;
+	cursor: pointer;
+	font-size: 18px;
+	transition: all 0.4s;
+	max-height: 45px;
+	min-width: fit-content;
 
-  &:hover {
-    background-color: $main-blue;
-    color: $main-white;
-    border-color: $main-white ;
-  }
+	&:hover {
+		background-color: $main-blue;
+		color: $main-white;
+		border-color: $main-white;
+	}
 
-  @media (max-width: 767px) {
-
-  }
+	@media (max-width: 767px) {
+	}
 }
 
 .top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 18px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 18px;
 }

@@ -10,25 +10,25 @@ import CatalogCard from '@/components/CatalogCard/CatalogCard'
 import styles from './CatalogPage.module.scss'
 
 const CatalogPage = () => {
-  return (
-    <main className={styles.root}>
-      <TopSection />
-      <CategoriesSection />
-      <div className={styles.content}>
-        <div className={styles.desctopFilters}>
-          <FiltersSection />
-        </div>
-        <section className={styles.list}>
-          {vacancyList.map(vacancy => (
-            <CatalogCard
-              key={vacancy.id}
-              card={vacancy}
-            />
-          ))}
-        </section>
-      </div>
-    </main>
-  )
+	return (
+		<main className={styles.root}>
+			<TopSection />
+			<CategoriesSection />
+			<div className={styles.content}>
+				<div className={styles.desctopFilters}>
+					<FiltersSection />
+				</div>
+				<section className={styles.list}>
+					{vacancyList.map(vacancy => (
+						<CatalogCard
+							key={vacancy.id}
+							card={vacancy}
+						/>
+					))}
+				</section>
+			</div>
+		</main>
+	)
 }
 
 export default CatalogPage
