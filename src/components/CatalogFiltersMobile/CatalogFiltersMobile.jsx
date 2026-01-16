@@ -2,6 +2,8 @@ import React from 'react'
 
 import clsx from 'clsx'
 
+import FiltersSection from '@/screens/CatalogPage/sections/FiltersSection/FiltersSection'
+
 import { useCatalogFiltersStore } from '@/store/catalogFiltersStore'
 
 import CrossIcon from '@/assets/icons/CrossIcon'
@@ -30,6 +32,8 @@ const CatalogFiltersMobile = () => {
 						<CrossIcon />
 					</span>
 				</div>
+
+				<FiltersSection />
 			</div>
 		</div>
 	)

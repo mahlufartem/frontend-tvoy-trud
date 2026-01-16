@@ -1,4 +1,7 @@
 .root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .filterBlock {
@@ -18,12 +21,25 @@
 	@media (max-width: 1439px) {
 		flex-direction: column;
 	}
+
+  @media (max-width: 1023px) {
+    flex-direction: row;
+  }
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+
+  @media (max-width: 1023px) {
+    margin-bottom: auto;
+    margin-top: auto;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+  }
 
   button {
     width: 100%;
@@ -36,6 +52,14 @@
     background-color: transparent;
     cursor: pointer;
     outline: none;
+
+    @media (max-width: 1023px) {
+      flex-direction: row;
+      padding: 16px;
+      background-color: transparent;
+      gap: 20px;
+      font-size: 16px ;
+    }
 
     &:last-child {
       color: $main-black;
