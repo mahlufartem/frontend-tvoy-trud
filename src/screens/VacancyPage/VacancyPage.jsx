@@ -38,6 +38,8 @@ const VacancyPage = ({ id }) => {
 
 					<div className={styles.accardionsGroup}>
 						<Accordion title='Оплата заказа'></Accordion>
+						<Accordion title='Начало и окончание заявки'></Accordion>
+						<Accordion title='Ваши обязанности'></Accordion>
 
 						<Accordion title='Требуется от вас'>
 							<div className={styles.yourRequired}>
@@ -71,7 +73,7 @@ const VacancyPage = ({ id }) => {
 							</div>
 						</Accordion>
 
-						<Accordion title='Оплата заказа'></Accordion>
+						<Accordion title='Инструктаж и обучение'></Accordion>
 					</div>
 
 					<div className={styles.vacancyList}>
