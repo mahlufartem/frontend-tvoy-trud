@@ -4,8 +4,7 @@ import { vacancyList } from '@/screens/CatalogPage/data'
 import CategoriesSection from '@/screens/CatalogPage/sections/CategoriesSection/CategoriesSection'
 import FiltersSection from '@/screens/CatalogPage/sections/FiltersSection/FiltersSection'
 import TopSection from '@/screens/CatalogPage/sections/TopSection/TopSection'
-
-import CatalogCard from '@/components/CatalogCard/CatalogCard'
+import VacancyListSection from '@/screens/CatalogPage/sections/VacancyListSection/VacancyListSection'
 
 import styles from './CatalogPage.module.scss'
 
@@ -18,14 +17,7 @@ const CatalogPage = () => {
 				<div className={styles.desctopFilters}>
 					<FiltersSection />
 				</div>
-				<section className={styles.list}>
-					{vacancyList.map(vacancy => (
-						<CatalogCard
-							key={vacancy.id}
-							card={vacancy}
-						/>
-					))}
-				</section>
+				<VacancyListSection />
 			</div>
 		</main>
 	)
