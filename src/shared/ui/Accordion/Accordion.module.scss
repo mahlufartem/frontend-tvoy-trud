@@ -1,0 +1,51 @@
+.root {
+  background: #fff;
+  border-radius: 33px;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 33px;
+  cursor: pointer;
+  border: none;
+}
+
+.arrow {
+  color: $main-black;
+  transition: transform 0.25s ease;
+
+  svg {
+    & path {
+      stroke-opacity: 1!important;
+    }
+  }
+}
+
+.arrow.open {
+  transform: rotate(-180deg);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.right {
+  font-size: 14px;
+  color: #2f80ed;
+}
+
+.collapse {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.content {
+  padding: 0 20px 20px;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { vacancyList } from '@/screens/CatalogPage/data'
 import CategoriesSection from '@/screens/CatalogPage/sections/CategoriesSection/CategoriesSection'
 import FiltersSection from '@/screens/CatalogPage/sections/FiltersSection/FiltersSection'
 import TopSection from '@/screens/CatalogPage/sections/TopSection/TopSection'
-import VacancyListSection from '@/screens/CatalogPage/sections/VacancyListSection/VacancyListSection'
+
+import VacancyList from '@/components/VacancyList/VacancyList'
 
 import styles from './CatalogPage.module.scss'
 
@@ -17,7 +17,7 @@ const CatalogPage = () => {
 				<div className={styles.desctopFilters}>
 					<FiltersSection />
 				</div>
-				<VacancyListSection />
+				<VacancyList />
 			</div>
 		</main>
 	)

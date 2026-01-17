@@ -4,14 +4,15 @@ import { vacancyList } from '@/screens/CatalogPage/data'
 import VacancyPage from '@/screens/VacancyPage/VacancyPage'
 
 export async function generateStaticParams() {
-	// В дальнейшем заменить на реальный запрос списка вакансий
 	return vacancyList.map(vac => ({
-		id: vac.id
+		id: String(vac.id)
 	}))
 }
 
-const Page = ({ params }) => {
-	return <VacancyPage />
+const Page = async ({ params }) => {
+	const { id } = await params
+
+	return <VacancyPage id={id} />
 }
 
 export default Page

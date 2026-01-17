@@ -4,9 +4,9 @@ import { vacancyList } from '@/screens/CatalogPage/data'
 
 import CatalogCard from '@/components/CatalogCard/CatalogCard'
 
-import styles from './VacancyListSection.module.scss'
+import styles from './VacancyList.module.scss'
 
-const VacancyListSection = () => {
+const VacancyList = () => {
 	return (
 		<section className={styles.root}>
 			{vacancyList.map(vacancy => (
@@ -19,4 +19,4 @@ const VacancyListSection = () => {
 	)
 }
 
-export default VacancyListSection
+export default VacancyList
