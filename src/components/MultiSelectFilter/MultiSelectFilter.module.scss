@@ -1,22 +1,39 @@
 .root {
   background: #fff;
   border-radius: 33px;
+  overflow: hidden;
 }
 
 .header {
-  width: 100%;
-  background: $main-white;
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
   padding: 20px;
-  border-radius: 33px;
   cursor: pointer;
 }
 
-.arrow {
-  transition: transform 0.2s ease;
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
+.clear {
+  background: none;
+  border: none;
+  color: $main-blue;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.arrow {
+  transition: transform 0.25s ease;
 }
 
 .arrow.open {
@@ -28,26 +45,44 @@
   font-weight: 700;
 }
 
-.clear {
-  background: none;
-  border: none;
-  color: $main-blue;
-  cursor: pointer;
+.collapse {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+          max-height 0.35s ease,
+          opacity 0.25s ease,
+          transform 0.25s ease;
 }
 
-.search {
-  margin-bottom: 28px;
-
-  input {
-    width: 100%;
-    border-radius: 999px;
-    padding: 12px 18px;
-    border: 1px solid #bdbdbd;
-  }
+.collapse.open {
+  max-height: 620px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .content {
   padding: 0 20px 20px;
+}
+
+.search {
+  position: relative;
+  margin-bottom: 28px;
+
+  .searchIcon {
+    position: absolute;
+    top: 54%;
+    left: 12px;
+    transform: translateY(-50%);
+  }
+
+  input {
+    width: 100%;
+    border-radius: 999px;
+    padding: 12px 18px 12px 40px;
+    border: 1px solid #bdbdbd;
+  }
 }
 
 .list {
@@ -70,10 +105,10 @@
 }
 
 .checkbox {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 6px;
-  border: 1.5px solid #a8a8a8;
+  border: 1.5px solid $main-light-black;
 }
 
 .item input:checked + .checkbox {

@@ -3,6 +3,7 @@
 import React, { useMemo, useState } from 'react'
 
 import ArrowDownIcon from '@/assets/icons/ArrowDownIcon'
+import SearchIconSmall from '@/assets/icons/SearchIconSmall'
 
 import styles from './MultiSelectFilter.module.scss'
 
@@ -17,6 +18,8 @@ const MultiSelectFilter = ({
 }) => {
 	const [search, setSearch] = useState('')
 	const safeValue = Array.isArray(value) ? value : []
+
+	const hasSelected = safeValue.length > 0
 
 	const filteredItems = useMemo(() => {
 		const q = search.toLowerCase()
@@ -47,21 +50,41 @@ const MultiSelectFilter = ({
 		}
 	}
 
+	const clearAll = e => {
+		e.stopPropagation()
+		onChange([])
+	}
+
 	return (
 		<div className={styles.root}>
 			<div
 				className={styles.header}
 				onClick={onToggle}
 			>
-				<div className={`${styles.arrow} ${isOpen ? styles.open : ''}`}>
-					<ArrowDownIcon />
+				<div className={styles.left}>
+					<div className={`${styles.arrow} ${isOpen ? styles.open : ''}`}>
+						<ArrowDownIcon />
+					</div>
+					<span className={styles.title}>{title}</span>
 				</div>
-				<span className={styles.title}>{title}</span>
+
+				{hasSelected && (
+					<button
+						className={styles.clear}
+						onClick={clearAll}
+						type='button'
+					>
+						ОЧИСТИТЬ
+					</button>
+				)}
 			</div>
 
-			{isOpen && (
+			<div className={`${styles.collapse} ${isOpen ? styles.open : ''}`}>
 				<div className={styles.content}>
 					<div className={styles.search}>
+						<div className={styles.searchIcon}>
+							<SearchIconSmall />
+						</div>
 						<input
 							placeholder={placeholder}
 							value={search}
@@ -96,7 +119,7 @@ const MultiSelectFilter = ({
 						))}
 					</div>
 				</div>
-			)}
+			</div>
 		</div>
 	)
 }

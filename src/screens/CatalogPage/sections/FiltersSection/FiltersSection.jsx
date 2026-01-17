@@ -29,20 +29,15 @@ const orderTypes = [
 	{ id: 25, label: 'Тип заказа 5' }
 ]
 const FiltersSection = () => {
-	const [radius, setRadius] = useState(0)
-	const [date, setDate] = useState('')
-	const [startTime, setStartTime] = useState('09:00')
-	const [endTime, setEndTime] = useState('09:00')
-
-	const { isAccordionOpen, toggleAccordion, filters, setFilter, resetFilters } =
+	const { filters, setFilter, resetFilters, isAccordionOpen, toggleAccordion } =
 		useCatalogFiltersStore()
 
 	return (
 		<section className={styles.root}>
 			<div className={styles.filterBlock}>
 				<SearchRadius
-					value={radius}
-					onChange={setRadius}
+					value={filters.radius}
+					onChange={v => setFilter('radius', v)}
 					min={0}
 					max={100}
 				/>
@@ -51,8 +46,8 @@ const FiltersSection = () => {
 			<div className={styles.filterBlock}>
 				<DatePicker
 					label='Дата выхода на смену'
-					value={date}
-					onChange={setDate}
+					value={filters.date}
+					onChange={v => setFilter('date', v)}
 				/>
 			</div>
 
@@ -60,20 +55,22 @@ const FiltersSection = () => {
 				<div className={styles.row}>
 					<TimePicker
 						label='Начало с'
-						value={startTime}
-						onChange={setStartTime}
+						value={filters.startTime}
+						onChange={v => setFilter('startTime', v)}
 						step={30}
 					/>
 					<TimePicker
 						label='Завершение до'
-						value={endTime}
-						onChange={setEndTime}
+						value={filters.endTime}
+						onChange={v => setFilter('endTime', v)}
 					/>
 				</div>
 			</div>
+
 			<div className={styles.filterBlock}>
 				<MultiSelectFilter
 					title='Торговые бренды'
+					placeholder='Название бренда'
 					items={brands}
 					value={filters.brands}
 					onChange={v => setFilter('brands', v)}
@@ -85,6 +82,7 @@ const FiltersSection = () => {
 			<div className={styles.filterBlock}>
 				<MultiSelectFilter
 					title='Тип заказа'
+					placeholder='Тип заказа'
 					items={orderTypes}
 					value={filters.orderTypes}
 					onChange={v => setFilter('orderTypes', v)}

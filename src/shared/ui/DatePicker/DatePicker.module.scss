@@ -23,6 +23,14 @@
   font-size: 16px;
 }
 
+.arrow {
+  transition: transform 0.25s ease;
+}
+
+.arrow.open {
+  transform: rotate(-180deg);
+}
+
 .calendar {
   position: absolute;
   top: calc(100% + 12px);

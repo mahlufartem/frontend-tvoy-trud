@@ -44,7 +44,7 @@ const TimePicker = ({ value, onChange, label, step = 15 }) => {
 				onClick={() => setOpen(v => !v)}
 			>
 				<span className={styles.value}>{value || '--:--'}</span>
-				<span className={styles.icon}>
+				<span className={`${styles.arrow} ${open ? styles.open : ''}`}>
 					<ArrowDownIcon />
 				</span>
 			</div>

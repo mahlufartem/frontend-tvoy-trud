@@ -80,7 +80,7 @@ const DatePicker = ({ value, onChange, label }) => {
 				<span className={styles.value}>
 					{value ? formatDate(new Date(value)) : 'Выберите дату'}
 				</span>
-				<span className={styles.icon}>
+				<span className={`${styles.arrow} ${open ? styles.open : ''}`}>
 					<ArrowDownIcon />
 				</span>
 			</div>
