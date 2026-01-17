@@ -6,6 +6,10 @@
 		padding: 100px 60px 60px 60px;
 	}
 
+	@media (max-width: 767px) {
+		padding: 100px 20px 20px 20px;
+	}
+
 	.header {
 		margin-bottom: 40px;
 
@@ -58,6 +62,10 @@
 			background-color: rgba(202, 234, 217, 1);
 			padding: 30px;
 
+			@media (max-width: 767px) {
+				height: 320px;
+			}
+
 			button {
 				background-color: $main-white;
 				padding: 20px 16px;
@@ -106,6 +114,10 @@
 			padding: 0 20px 20px 80px;
 			font-size: 16px;
 			color: $main-light-black;
+
+			@media (max-width: 767px) {
+				padding: 0 20px 0 20px;
+			}
 
 			p {
 				margin-bottom: 10px;
