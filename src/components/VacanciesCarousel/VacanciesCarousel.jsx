@@ -1,7 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useRef } from 'react'
+import React from 'react'
+
+import useDragScroll from '@/hooks/useDragScroll'
 
 import ArrowLeftRoundedIcon from '@/assets/icons/ArrowLeftRoundedIcon'
 import ArrowRightRoundedIcon from '@/assets/icons/ArrowRightRoundedIcon'
@@ -11,47 +13,10 @@ import { vacancies } from '@/components/VacanciesCarousel/data'
 import styles from './VacanciesCarousel.module.scss'
 
 const VacanciesCarousel = () => {
-	const trackRef = useRef(null)
-	const isDragging = useRef(false)
-	const startX = useRef(0)
-	const scrollLeft = useRef(0)
-
-	const onMouseDown = e => {
-		if (!trackRef.current) return
-
-		isDragging.current = true
-		startX.current = e.pageX - trackRef.current.offsetLeft
-		scrollLeft.current = trackRef.current.scrollLeft
-
-		trackRef.current.classList.add(styles.dragging)
-	}
-
-	const onMouseMove = e => {
-		if (!isDragging.current || !trackRef.current) return
-
-		e.preventDefault()
-
-		const x = e.pageX - trackRef.current.offsetLeft
-		const walk = (x - startX.current) * 1.2
-		trackRef.current.scrollLeft = scrollLeft.current - walk
-	}
-
-	const stopDrag = () => {
-		isDragging.current = false
-		trackRef.current?.classList.remove(styles.dragging)
-	}
-
-	const scroll = direction => {
-		if (!trackRef.current) return
-		const card = trackRef.current.firstElementChild
-		if (!card) return
-
-		const gap = 16
-		trackRef.current.scrollBy({
-			left: direction * (card.offsetWidth + gap),
-			behavior: 'smooth'
-		})
-	}
+	const { trackRef, scrollByCard, bind } = useDragScroll({
+		gap: 16,
+		dragClassName: styles.dragging
+	})
 
 	return (
 		<div className={styles.root}>
@@ -62,14 +27,14 @@ const VacanciesCarousel = () => {
 
 				<div className={styles.controls}>
 					<button
-						onClick={() => scroll(-1)}
 						className={styles.controlBtn}
+						onClick={() => scrollByCard(-1)}
 					>
 						<ArrowLeftRoundedIcon />
 					</button>
 					<button
-						onClick={() => scroll(1)}
 						className={styles.controlBtn}
+						onClick={() => scrollByCard(1)}
 					>
 						<ArrowRightRoundedIcon />
 					</button>
@@ -80,10 +45,7 @@ const VacanciesCarousel = () => {
 				<div
 					ref={trackRef}
 					className={styles.track}
-					onMouseDown={onMouseDown}
-					onMouseMove={onMouseMove}
-					onMouseUp={stopDrag}
-					onMouseLeave={stopDrag}
+					{...bind}
 				>
 					{vacancies.map(v => (
 						<article
@@ -97,6 +59,7 @@ const VacanciesCarousel = () => {
 									draggable={false}
 								/>
 							</div>
+
 							<div className={styles.info}>
 								<div className={styles.name}>{v.title}</div>
 								<div className={styles.city}>{v.city}</div>

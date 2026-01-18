@@ -1,1 +1,5 @@
 export { default as aboutPageHero } from './aboutPageHero.png'
+export { default as advantage1 } from './advantage1.png'
+export { default as advantage2 } from './advantage2.png'
+export { default as advantage3 } from './advantage3.png'
+export { default as advantage4 } from './advantage4.png'

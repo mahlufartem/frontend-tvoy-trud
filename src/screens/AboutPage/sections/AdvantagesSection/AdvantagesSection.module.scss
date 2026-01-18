@@ -1,10 +1,173 @@
 .root {
-    padding: 50px 98px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0 20px 60px;
 
 
-  h4 {
-    font-size: 36px;
-    margin-bottom: 64px;
+  @media (min-width: 1440px) {
+    padding: 60px 60px 20px 98px;
+  }
+
+
+  @media (max-width: 1439px) {
+    padding: 60px 60px 20px 60px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 60px 20px 0;
   }
 
 }
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+
+  @media (min-width: 1440px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 32px ;
+    & span {
+      display: none;
+    }
+  }
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+
+  @media (min-width: 1360px) {
+   display: none;
+  }
+}
+
+.controlBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: $main-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color .3s;
+
+  &:hover {
+    background: $main-light-blue;
+  }
+
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.viewport {
+  overflow: hidden;
+
+}
+
+.track {
+  max-width: 100%;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-top: 40px;
+  scroll-behavior: smooth;
+
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 1360px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 1360px) {
+    cursor: grab;
+    padding-left: 60px;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 20px;
+  }
+}
+
+.dragging {
+  @media (max-width: 1360px) {
+    cursor: grabbing;
+    scroll-behavior: auto;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  width: 233px;
+  height: 186px;
+  background: $main-blue;
+  border-radius: 44px;
+  padding: 40px 28px;
+  user-select: none;
+
+
+  @media (min-width: 1440px) {
+    width: 316px;
+    height: 248px;
+  }
+
+  @media (max-width: 1360px) {
+    min-width: 288px;
+    width: 288px;
+    height: 186px;
+  }
+
+}
+
+.image {
+  position: absolute;
+  top: -28px;
+  right: 50%;
+  transform: translateX(50%);
+  transition: all .3s;
+
+
+  @media (max-width: 1440px) {
+    cursor: pointer;
+  }
+
+  &:hover {
+    //transform: scale(1.2);
+  }
+
+  & img {
+    width: 116px;
+    height: 116px;
+  }
+
+}
+
+.info {
+  width: 100%;
+  white-space: pre-line;
+}
+
+.name {
+  color: $main-white;
+  text-align: center;
+  font-weight: 500;
+}
+

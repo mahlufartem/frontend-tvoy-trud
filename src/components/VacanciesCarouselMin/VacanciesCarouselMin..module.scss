@@ -37,6 +37,10 @@
 .controls {
 	display: flex;
 	gap: 8px;
+
+	@media (min-width: 1360px) {
+		display: none;
+	}
 }
 
 .controlBtn {
@@ -186,6 +190,13 @@
 		font-size: 20px;
 		font-weight: 700;
 
+		span {
+			max-width: 140px;
+
+			@media (max-width: 1290px) {
+				max-width: 100%;
+			}
+		}
 		@media (max-width: 1290px) {
 			& svg {
 				display: none;
