@@ -1,7 +1,9 @@
 import React from 'react'
 
+import AboutPage from '@/screens/AboutPage/AboutPage'
+
 const Page = () => {
-	return <div></div>
+	return <AboutPage />
 }
 
 export default Page
