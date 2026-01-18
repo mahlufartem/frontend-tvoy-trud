@@ -16,14 +16,25 @@
 		@media (max-width: 1023px) {
 			margin-bottom: 20px;
 		}
+
+
 	}
 
 	.breadCrambs {
-		display: block;
+		display: flex;
+		align-items: center;
+		gap: 10px;
 		font-size: 20px;
 		font-weight: 500;
 		color: $main-light-black;
 		margin-bottom: 28px;
+
+		svg {
+			width: 17px;
+			height: 17px;
+
+			transform: rotate(-180deg);
+		}
 
 		@media (max-width: 1023px) {
 			font-size: 16px;
@@ -90,27 +101,95 @@
 			padding: 40px;
 			background-color: $main-white;
 			border-radius: 33px;
+
+			@media (max-width: 1023px) {
+				padding: 20px;
+			}
 		}
 
+		.cardInfo {
+			font-size: 20px;
 
-		.accardionsGroup{
+			@media (max-width: 1023px) {
+				font-size: 16px;
+			}
+		}
+
+		.cardAddress {
+			display: block;
+			margin-bottom: 15px;
+		}
+
+		.cardTime {
+			margin-bottom: 20px;
+		}
+
+		.cardPrice {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 40px;
+
+			@media (max-width: 1023px) {
+				margin-bottom: 20px;
+			}
+
+			strong {
+				font-size: 36px;
+				color: $main-blue;
+
+				@media (max-width: 1023px) {
+					font-size: 28px;
+				}
+			}
+
+			span {
+				font-size: 20px;
+
+				@media (max-width: 1023px) {
+					font-size: 16px;
+				}
+			}
+		}
+
+		.cardIcons {
+			display: flex;
+			gap: 20px;
+			font-size: 20px;
+			margin-bottom: 40px;
+
+			@media (max-width: 1023px) {
+				margin-bottom: 28px;
+			}
+		}
+
+		.takeOrder {
+			border: none;
+			outline: none;
+			background-color: $main-blue;
+			color: $main-white;
+			padding: 20px 60px;
+			border-radius: 45px;
+			cursor: pointer;
+		}
+
+		.accardionsGroup {
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
 		}
 
-      .vacancyList {
-        margin-top: 20px;
+		.vacancyList {
+			margin-top: 20px;
 
-         h4 {
-           display: block;
-           font-size: 36px;
-           font-weight: 700;
-           margin-bottom: 28px;
-         }
-      }
+			h4 {
+				display: block;
+				font-size: 36px;
+				font-weight: 700;
+				margin-bottom: 28px;
+			}
+		}
 
-		.yourRequired{
+		.yourRequired {
 			padding: 0 20px 20px 80px;
 			font-size: 16px;
 			color: $main-light-black;
@@ -123,7 +202,7 @@
 				margin-bottom: 10px;
 			}
 
-			ul{
+			ul {
 				padding: 0;
 			}
 
@@ -134,7 +213,6 @@
 			}
 
 			.apps {
-
 				div {
 					display: flex;
 					gap: 8px;
