@@ -38,10 +38,20 @@
 		padding: 16px;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 
+		& svg {
+			min-width: 12px;
+			min-height: 12px;
+		}
+
 		.left {
 			display: flex;
 			align-items: center;
 			gap: 14px;
+
+			& svg {
+				min-width: 20px;
+				min-height: 25px;
+			}
 
 			span {
 				font-size: 20px;
