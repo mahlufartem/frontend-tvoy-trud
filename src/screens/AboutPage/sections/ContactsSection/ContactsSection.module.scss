@@ -1,0 +1,103 @@
+.root {
+	padding: 60px;
+	background-color: $main-light-blue;
+
+	@media (min-width: 1440px) {
+		padding: 60px 98px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 40px 20px;
+	}
+
+	.title {
+		margin-bottom: 52px;
+		display: flex;
+		align-items: center;
+		gap: 28px;
+		h1 {
+			font-size: 36px;
+
+			@media (max-width: 1023px) {
+				font-size: 32px;
+			}
+		}
+
+		svg {
+			width: 27px;
+			height: 27px;
+		}
+		@media (max-width: 1023px) {
+			margin-bottom: 28px;
+		}
+	}
+
+	.content {
+		display: flex;
+		gap: 20px;
+		border-radius: 45px;
+		padding: 40px;
+		background-color: $main-white;
+
+		@media (max-width: 1023px) {
+			flex-direction: column-reverse;
+			padding: 20px;
+			height: 541px;
+			border-radius: 22px;
+          gap: 0;
+		}
+	}
+
+	.left {
+		flex-basis: 50%;
+		background-color: rgba(212, 221, 232, 1);
+		border-radius: 24px;
+		height: 400px;
+
+		@media (max-width: 1023px) {
+			flex-basis: 100%;
+			border-radius: 22px;
+		}
+	}
+
+	.right {
+		height: 100%;
+
+		h4 {
+			font-size: 36px;
+			margin-bottom: 40px;
+
+			@media (max-width: 1023px) {
+				font-size: 18px;
+				margin-bottom: 20px;
+			}
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			font-size: 20px;
+
+			@media (max-width: 1023px) {
+				font-size: 16px;
+				gap: 15px;
+			}
+		}
+
+		.mapBtn {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			color: $main-blue;
+			font-size: 20px;
+			font-weight: 500;
+			margin-top: 40px;
+
+			@media (max-width: 1023px) {
+				font-size: 16px;
+              margin-top: 30px;
+			}
+		}
+	}
+}
