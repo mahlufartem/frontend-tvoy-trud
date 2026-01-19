@@ -1,0 +1,168 @@
+.root {
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 98px 20px 98px;
+
+
+  @media (max-width: 1440px) {
+    padding: 60px 60px 20px 60px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 60px 20px 20px 20px;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+
+  @media (max-width: 1919px) {
+    font-size: 36px ;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 32px ;
+    & span {
+      display: none;
+    }
+  }
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.controlBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color .3s;
+
+  &:hover {
+    background: $main-light-blue;
+  }
+
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.viewport {
+  overflow: hidden;
+}
+
+.track {
+  max-width: 100%;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+
+}
+
+.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1244px;
+  padding-left: 60px;
+
+
+  @media (min-width: 1440px) {
+    padding-left: 98px;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 20px;
+  }
+}
+
+.eventCard {
+
+
+  @media (max-width: 1440px) {
+
+  }
+
+  @media (max-width: 767px) {
+
+  }
+
+  .image {
+    width: 432px;
+    height: 253px;
+    background-color: rgba(212, 221, 232, 1);
+    border-radius: 24px;
+    margin-bottom: 28px;
+
+    @media (max-width: 1440px) {
+
+    }
+
+    @media (max-width: 1023px) {
+      width: 314px;
+      height: 187px;
+    }
+  }
+
+  .info {
+    margin-bottom: 30px;
+    padding: 0 30px;
+
+    @media (max-width: 767px) {
+      padding: 0 20px;
+    }
+
+    .date {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      color: $main-light-black;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 30px;
+
+      @media (max-width: 1023px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    span {
+      color: $main-black;
+      font-size: 22px;
+      font-weight: 700;
+
+      @media (max-width: 1023px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+
+}

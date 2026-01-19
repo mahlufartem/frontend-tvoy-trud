@@ -1,5 +1,6 @@
 import React from 'react'
 
+import EventPage from '@/screens/EventPage/EventPage'
 import { events } from '@/screens/EventsPage/data'
 
 // В проде заменить на реальный запрос
@@ -12,7 +13,7 @@ export async function generateStaticParams() {
 const Page = async ({ params }) => {
 	const { id } = await params
 
-	return <div>{id}</div>
+	return <EventPage id={id} />
 }
 
 export default Page
