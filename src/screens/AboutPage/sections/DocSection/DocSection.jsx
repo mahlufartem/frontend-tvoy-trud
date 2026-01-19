@@ -1,0 +1,33 @@
+import React from 'react'
+
+import { docs } from '@/screens/AboutPage/sections/DocSection/data'
+
+import ArrowRightTopIcon from '@/assets/icons/ArrowRightTopIcon'
+import DocIcon from '@/assets/icons/DocIcon'
+
+import styles from './DocSection.module.scss'
+
+const DocSection = () => {
+	return (
+		<div className={styles.root}>
+			<h4 className={styles.title}>Документы</h4>
+			<div className={styles.list}>
+				{docs.map(doc => (
+					<a
+						key={doc.id}
+						className={styles.doc}
+					>
+						<div className={styles.left}>
+							<DocIcon />
+							<span>{doc.title}</span>
+						</div>
+
+						<ArrowRightTopIcon />
+					</a>
+				))}
+			</div>
+		</div>
+	)
+}
+
+export default DocSection
