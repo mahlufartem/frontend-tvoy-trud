@@ -2,7 +2,8 @@ export const APP_ROUTES = {
 	primary: {
 		main: '/',
 		catalog: '/catalog',
-		promo: '/promo',
+		events: '/events',
+		event: '/event',
 		knowledgeBase: '/knowledge_base',
 		contacts: '/contacts',
 		about: '/about'

@@ -5,7 +5,7 @@ export const footerLinks = [
 		id: 'catalog',
 		items: [
 			{ label: 'Каталог вакансий', href: APP_ROUTES.primary.catalog },
-			{ label: 'Акции', href: APP_ROUTES.primary.promo },
+			{ label: 'Акции', href: APP_ROUTES.primary.events },
 			{ label: 'Вопросы и ответы', href: APP_ROUTES.secondary.faq },
 			{
 				label: 'Инструкции для пользователей',
