@@ -5,7 +5,7 @@ export const APP_ROUTES = {
 		events: '/events',
 		event: '/event',
 		knowledgeBase: '/knowledge_base',
-		contacts: '/about?scroll=contacts',
+		contacts: '/about#contacts',
 		about: '/about'
 	},
 	secondary: {
@@ -13,7 +13,7 @@ export const APP_ROUTES = {
 		instructions: '/instructions',
 		docs: '/docs',
 		self_employed: '/self-employed',
-		contacts: '/about?scroll=contacts',
+		contacts: '/about#contacts',
 		partners: '/partners'
 	}
 }

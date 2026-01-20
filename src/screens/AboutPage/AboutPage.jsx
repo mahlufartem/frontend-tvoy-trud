@@ -1,4 +1,5 @@
 import React from 'react'
+import { Suspense } from 'react'
 
 import AdvantagesSection from '@/screens/AboutPage/sections/AdvantagesSection/AdvantagesSection'
 import BannerSection from '@/screens/AboutPage/sections/BannerSection/BannerSection'
@@ -16,7 +17,9 @@ const AboutPage = () => {
 			<VacanciesCarouselMin />
 			<ContactUsSection />
 			<DocSection />
-			<ContactsSection />
+			<Suspense fallback={null}>
+				<ContactsSection />
+			</Suspense>
 		</div>
 	)
 }

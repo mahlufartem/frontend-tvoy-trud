@@ -1,7 +1,4 @@
-'use client'
-
-import { useSearchParams } from 'next/navigation'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import MapIcon from '@/assets/icons/MapIcon'
 import PencilIcon from '@/assets/icons/PencilIcon'
@@ -9,16 +6,6 @@ import PencilIcon from '@/assets/icons/PencilIcon'
 import styles from './ContactsSection.module.scss'
 
 const ContactsSection = () => {
-	const searchParams = useSearchParams()
-
-	useEffect(() => {
-		const target = searchParams.get('scroll')
-		if (!target) return
-
-		const el = document.getElementById(target)
-		el?.scrollIntoView({ behavior: 'smooth' })
-	}, [searchParams])
-
 	return (
 		<div
 			className={styles.root}
