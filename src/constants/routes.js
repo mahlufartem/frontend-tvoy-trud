@@ -4,7 +4,8 @@ export const APP_ROUTES = {
 		catalog: '/catalog',
 		events: '/events',
 		event: '/event',
-		knowledgeBase: '/knowledge_base',
+		// knowledgeBase: '/knowledge_base',
+		knowledgeBase: '/faq',
 		contacts: '/about#contacts',
 		about: '/about'
 	},

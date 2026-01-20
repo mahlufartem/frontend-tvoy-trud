@@ -25,7 +25,7 @@ const EventsPage = () => {
 					>
 						<div className={styles.image}></div>
 						<div className={styles.info}>
-							<div className={styles}>
+							<div className={styles.date}>
 								{date} <ArrowRightTopIcon />
 							</div>
 							<span>{title}</span>

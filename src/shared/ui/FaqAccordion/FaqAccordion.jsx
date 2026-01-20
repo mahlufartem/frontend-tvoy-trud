@@ -6,11 +6,13 @@ import clsx from 'clsx'
 
 import CrossRoundedIcon from '@/assets/icons/CrossRoundedIcon'
 
-import { faq } from '@/components/FAQ/data'
+import styles from './FaqAccordion.module.scss'
 
-import styles from './FAQ.module.scss'
-
-const FAQ = ({ title = 'Ответы на вопросы', variant = 'secondary' }) => {
+const FaqAccordion = ({
+	items = [],
+	title = 'Ответы на вопросы',
+	variant = 'secondary'
+}) => {
 	const [activeId, setActiveId] = useState(null)
 
 	const toggle = id => {
@@ -20,7 +22,7 @@ const FAQ = ({ title = 'Ответы на вопросы', variant = 'secondary'
 	return (
 		<div className={clsx(styles.root, styles[variant])}>
 			<div className={styles.list}>
-				{faq.map(item => {
+				{items.map(item => {
 					const isActive = item.id === activeId
 
 					return (
@@ -49,10 +51,8 @@ const FAQ = ({ title = 'Ответы на вопросы', variant = 'secondary'
 					)
 				})}
 			</div>
-
-			<button className={styles.all}>Все вопросы</button>
 		</div>
 	)
 }
 
-export default FAQ
+export default FaqAccordion

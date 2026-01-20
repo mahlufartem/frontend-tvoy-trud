@@ -16,6 +16,8 @@ const DocSection = () => {
 					<a
 						key={doc.id}
 						className={styles.doc}
+						href={doc.href}
+						target='_blank'
 					>
 						<div className={styles.left}>
 							<DocIcon />

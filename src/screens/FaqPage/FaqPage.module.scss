@@ -1,0 +1,49 @@
+.root {
+  .header {
+    padding: 120px 60px 40px 60px;
+    background-color: $main-light-blue;
+    //margin-bottom: 40px;
+
+    @media (min-width: 1440px) {
+      padding: 140px 98px 60px 98px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 100px 20px 20px 20px;
+    }
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+
+    @media (max-width: 1023px) {
+      font-size: 32px;
+    }
+  }
+
+  .content {
+    background-color: $main-white;
+    padding: 0 60px;
+
+    @media (max-width: 767px) {
+      padding: 0 20px;
+    }
+  }
+
+
+
+  .feedBack {
+    padding: 40px 60px;
+    background-color: $main-light-blue;
+
+
+    @media (min-width: 1440px) {
+      padding: 60px 98px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
+  }
+}
