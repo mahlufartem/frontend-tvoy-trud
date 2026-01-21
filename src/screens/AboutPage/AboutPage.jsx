@@ -16,8 +16,8 @@ const AboutPage = () => {
 			<AdvantagesSection />
 			<VacanciesCarouselMin />
 			<ContactUsSection />
-			<DocSection />
 			<Suspense fallback={null}>
+				<DocSection />
 				<ContactsSection />
 			</Suspense>
 		</div>

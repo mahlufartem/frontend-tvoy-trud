@@ -1,4 +1,8 @@
+'use client'
+
 import React from 'react'
+
+import useScrollFromQuery from '@/hooks/useScrollFromQuery'
 
 import { docs } from '@/screens/AboutPage/sections/DocSection/data'
 
@@ -8,6 +12,8 @@ import DocIcon from '@/assets/icons/DocIcon'
 import styles from './DocSection.module.scss'
 
 const DocSection = () => {
+	useScrollFromQuery()
+
 	return (
 		<div
 			className={styles.root}

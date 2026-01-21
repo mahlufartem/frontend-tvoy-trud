@@ -1,4 +1,8 @@
+'use client'
+
 import React from 'react'
+
+import useScrollFromQuery from '@/hooks/useScrollFromQuery'
 
 import MapIcon from '@/assets/icons/MapIcon'
 import PencilIcon from '@/assets/icons/PencilIcon'
@@ -6,6 +10,8 @@ import PencilIcon from '@/assets/icons/PencilIcon'
 import styles from './ContactsSection.module.scss'
 
 const ContactsSection = () => {
+	useScrollFromQuery()
+
 	return (
 		<div
 			className={styles.root}

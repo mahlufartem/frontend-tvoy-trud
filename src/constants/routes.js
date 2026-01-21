@@ -6,15 +6,15 @@ export const APP_ROUTES = {
 		event: '/event',
 		// knowledgeBase: '/knowledge_base',
 		knowledgeBase: '/faq',
-		contacts: '/about#contacts',
+		contacts: '/about?scrollTo=contacts',
 		about: '/about'
 	},
 	secondary: {
 		faq: '/faq',
 		instructions: '/instructions',
-		docs: '/about#documents ',
+		docs: '/about?scrollTo=documents ',
 		self_employed: '/self-employed',
-		contacts: '/about#contacts',
+		contacts: '/about?scrollTo=contacts',
 		partners: '/partners'
 	}
 }
