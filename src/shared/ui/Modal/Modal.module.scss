@@ -1,81 +1,86 @@
 .overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 99;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(2px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 0.2s ease;
-  overflow-y: auto;
+	position: fixed;
+	inset: 0;
+	z-index: 99;
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(2px);
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+	overflow-y: auto;
+	animation: fadeIn 0.2s ease;
+
+	@media (min-width: 1024px) {
+		align-items: center;
+	}
 }
 
 .modal {
-  overflow-y: auto;
-  position: relative;
-  background: #fff;
-  border-radius: 24px;
-  max-width: 620px;
-  width: 100%;
-  padding: 40px;
-  animation: scaleIn 0.25s ease;
+	max-height: calc(100vh - 48px);
+	overflow-y: auto;
+	position: relative;
+	background: #fff;
+	border-radius: 24px;
+	max-width: 620px;
+	width: 100%;
+	padding: 40px;
+	animation: scaleIn 0.25s ease;
 
-  @media(min-width: 1449px) {
-    max-width: 988px;
-  }
+	@media (min-width: 1449px) {
+		max-width: 988px;
+	}
 
-  @media(max-width: 1023px) {
-    padding: 20px;
-    max-width: calc(100% - 32px);
-  }
+	@media (max-width: 1023px) {
+		padding: 20px;
+		max-width: calc(100% - 32px);
+        border-radius: 20px;
+	}
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  gap: 3 0px;
-  margin-bottom: 40px;
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	margin-bottom: 40px;
 
-  .title {
-    font-size: 36px;
-    line-height: 30px;
+	.title {
+		font-size: 36px;
+		line-height: 30px;
 
-    @media(max-width: 1023px) {
-      font-size: 32px;
-    }
+		@media (max-width: 1023px) {
+			font-size: 32px;
+		}
+	}
 
-  }
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
+	svg {
+		width: 24px;
+		height: 24px;
+	}
 }
 
 .close {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 22px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	font-size: 22px;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes scaleIn {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+	from {
+		transform: scale(0.95);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
