@@ -101,6 +101,7 @@
       text-decoration: underline;
     }
   }
+
   .sendBtn {
     border: none;
     outline: none;
@@ -110,6 +111,10 @@
     color: $main-blue;
     font-weight: 500;
     cursor: pointer;
+
+	  &:disabled {
+		  opacity: .5;
+	  }
 
     @media (max-width: 1023px) {
       width: 100%;

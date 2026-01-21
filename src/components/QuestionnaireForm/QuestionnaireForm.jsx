@@ -10,15 +10,27 @@ import PhoneInput from '@/shared/ui/PhoneInput/PhoneInput'
 import styles from './QuestionnaireForm.module.scss'
 
 const QuestionnaireForm = ({ isOpen, onClose }) => {
-	const [name, setName] = useState('')
-	const [lastname, setLastName] = useState('')
-	const [phone, setPhone] = useState('')
-	const [profession, setProfession] = useState(null)
-	const [city, setCity] = useState(null)
+	const [form, setForm] = useState({
+		name: '',
+		lastname: '',
+		phone: '',
+		city: null,
+		profession: null
+	})
+
+	const handleChange = field => value => {
+		setForm(prev => ({
+			...prev,
+			[field]: value
+		}))
+	}
 
 	const onSubmit = e => {
 		e.preventDefault()
 	}
+
+	const isDisabled = !form.name || !form.phone || !form.city || !form.profession
+
 	return (
 		<Modal
 			isOpen={isOpen}
@@ -32,57 +44,64 @@ const QuestionnaireForm = ({ isOpen, onClose }) => {
 				<div className={styles.inputsGroup}>
 					<div className={styles.row}>
 						<div className={styles.input}>
-							<label htmlFor=''>Ваше имя</label>
+							<label>Ваше имя</label>
 							<input
 								placeholder='Введите имя'
-								value={name}
-								onChange={e => setName(e.target.value)}
+								value={form.name}
+								onChange={e => handleChange('name')(e.target.value)}
 							/>
 						</div>
+
 						<div className={styles.input}>
-							<label htmlFor=''>Ваша фамилия</label>
+							<label>Ваша фамилия</label>
 							<input
 								placeholder='Введите фамилию'
-								value={lastname}
-								onChange={e => setLastName(e.target.value)}
+								value={form.lastname}
+								onChange={e => handleChange('lastname')(e.target.value)}
 							/>
 						</div>
 					</div>
+
 					<div className={styles.row}>
 						<div className={styles.input}>
-							<label htmlFor=''>Номер телефона</label>
+							<label>Номер телефона</label>
 							<PhoneInput
-								value={phone}
-								onChange={setPhone}
+								value={form.phone}
+								onChange={handleChange('phone')}
 							/>
 						</div>
+
 						<div className={styles.input}>
 							<Dropdown
-								label='Ваша город'
+								label='Ваш город'
 								placeholder='Выберите город'
 								options={cities}
-								value={city}
-								onChange={setCity}
+								value={form.city}
+								onChange={handleChange('city')}
 							/>
 						</div>
 					</div>
+
 					<Dropdown
 						label='Ваша профессия'
 						placeholder='Выберите профессию'
 						options={professions}
-						value={profession}
-						onChange={setProfession}
+						value={form.profession}
+						onChange={handleChange('profession')}
 					/>
 				</div>
+
 				<p className={styles.text}>
 					Нажимая на кнопку “Отправить” вы соглашаетесь на обработку
 					персональных данных, подтверждаете, что ознакомились с
 					<a href='#'> политикой сервиса/оператора</a> и даете согласие на
 					получение информации.
 				</p>
+
 				<button
+					type='submit'
 					className={styles.sendBtn}
-					disabled={!name || !phone || !question}
+					disabled={isDisabled}
 				>
 					Отправить
 				</button>

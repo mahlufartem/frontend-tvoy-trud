@@ -16,23 +16,29 @@ const Modal = ({
 	className,
 	closeOnOverlay = true
 }) => {
-	if (!isOpen) return null
-
 	useEffect(() => {
+		if (!isOpen) return
+
+		const originalOverflow = document.body.style.overflow
 		document.body.style.overflow = 'hidden'
+
 		return () => {
-			document.body.style.overflow = ''
+			document.body.style.overflow = originalOverflow
 		}
-	}, [])
+	}, [isOpen])
 
 	useEffect(() => {
+		if (!isOpen) return
+
 		const onKeyDown = e => {
 			if (e.key === 'Escape') onClose?.()
 		}
 
 		window.addEventListener('keydown', onKeyDown)
 		return () => window.removeEventListener('keydown', onKeyDown)
-	}, [onClose])
+	}, [isOpen, onClose])
+
+	if (!isOpen) return null
 
 	return createPortal(
 		<div
