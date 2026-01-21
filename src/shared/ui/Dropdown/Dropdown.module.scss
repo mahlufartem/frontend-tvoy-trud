@@ -1,0 +1,77 @@
+.root {
+  width: 100%;
+  position: relative;
+}
+
+.label {
+  display: block;
+  color: $main-black;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.control {
+  width: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 0.5px solid $main-light-black;
+  padding: 0 14px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.value {
+  font-size: 16px;
+}
+
+.placeholder {
+  color: #b5b5b5;
+}
+
+.arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+  margin-left: 12px;
+}
+
+.open .arrow {
+  transform: rotate(-135deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  z-index: 10;
+}
+
+.option {
+  width: 100%;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.option:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.active {
+  font-weight: 600;
+}

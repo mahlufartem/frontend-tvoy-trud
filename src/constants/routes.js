@@ -12,7 +12,7 @@ export const APP_ROUTES = {
 	secondary: {
 		faq: '/faq',
 		instructions: '/instructions',
-		docs: '/docs',
+		docs: '/about#documents ',
 		self_employed: '/self-employed',
 		contacts: '/about#contacts',
 		partners: '/partners'

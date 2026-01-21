@@ -9,7 +9,10 @@ import styles from './DocSection.module.scss'
 
 const DocSection = () => {
 	return (
-		<div className={styles.root}>
+		<div
+			className={styles.root}
+			id='documents'
+		>
 			<h4 className={styles.title}>Документы</h4>
 			<div className={styles.list}>
 				{docs.map(doc => (
