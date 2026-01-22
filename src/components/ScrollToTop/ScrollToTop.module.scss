@@ -1,0 +1,41 @@
+.root {
+  position: fixed;
+  right: 34px;
+  bottom: 34px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #4192f6;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition:
+          opacity 0.3s ease,
+          transform 0.3s ease,
+          background 0.2s ease;
+
+  &:hover {
+    background: $main-blue;
+  }
+
+  svg {
+    transform: rotate(-90deg);
+    color: $main-white!important;
+    stroke: $main-white!important;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
