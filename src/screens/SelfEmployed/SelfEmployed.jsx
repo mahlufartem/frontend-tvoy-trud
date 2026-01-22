@@ -2,6 +2,7 @@ import React from 'react'
 
 import HowToGoSection from '@/screens/SelfEmployed/sections/HowToGoSection/HowToGoSection'
 import UniqueConditionsSection from '@/screens/SelfEmployed/sections/UniqueConditionsSection/UniqueConditionsSection'
+import WorkScheduleSection from '@/screens/SelfEmployed/sections/WorkScheduleSection/WorkScheduleSection'
 
 import FeedbackForm from '@/components/FeedbackForm/FeedbackForm'
 import ReturnToBackButton from '@/components/ReturnToBackButton/ReturnToBackButton'
@@ -27,6 +28,10 @@ const SelfEmployed = () => {
 			</div>
 
 			<HowToGoSection />
+
+			<div className={styles.container}>
+				<WorkScheduleSection />
+			</div>
 
 			<section className={styles.feedBackSection}>
 				<div className={styles.container}>
