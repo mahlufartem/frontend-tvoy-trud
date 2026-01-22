@@ -103,13 +103,17 @@
       flex-direction: column;
       gap: 5px;
       background-color: $main-light-blue;
-      border-radius: 44px;
       padding: 24px;
+      border-radius: 33px;
       font-size: 16px;
 
+      @media (min-width: 1440px) {
+        padding: 40px;
+        border-radius: 44px;
+      }
 
       @media (max-width: 767px) {
-        padding: 24px;
+        padding: 22px;
         border-radius: 22px;
       }
 
