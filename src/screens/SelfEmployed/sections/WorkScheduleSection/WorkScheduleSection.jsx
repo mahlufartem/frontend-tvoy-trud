@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { conditions } from '@/screens/SelfEmployed/sections/UniqueConditionsSection/data'
 import { requirements } from '@/screens/SelfEmployed/sections/WorkScheduleSection/data'
 
 import { clock } from '@/assets/images'
