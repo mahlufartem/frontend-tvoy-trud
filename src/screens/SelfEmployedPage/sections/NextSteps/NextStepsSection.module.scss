@@ -1,13 +1,14 @@
 .root {
-  background-color: $main-light-blue;
-  padding: 40px 0;
 
-  @media (max-width:1440px) {
+  padding: 40px 0;
+  background-color: $main-light-blue;
+
+  @media (max-width: 1023px) {
     padding: 40px 60px;
   }
 
   @media (max-width: 767px) {
-    padding: 20px;
+    padding: 20px ;
   }
 
   .container {
@@ -55,29 +56,34 @@
   .list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
 
-  .duty {
+  .step {
     display: flex;
-    flex-direction: column;
-    background-color: $main-white;
-    padding: 24px;
-    border-radius: 33px;
+    align-items: center;
+    width: 100%;
     font-size: 16px;
 
-    @media (min-width: 1440px) {
-      padding: 40px;
-      border-radius: 44px;
-    }
-
-    @media (max-width: 767px) {
-      padding: 22px;
-      border-radius: 22px;
-    }
-
-    span {
+    .stepLine {
+      color: $main-blue;
+      font-size: 24px;
       font-weight: 700;
+      margin-right: 10px;
     }
+
+    .stepText {
+      color: $main-black;
+    }
+  }
+
+  .info {
+    width: 100%;
+    padding: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 44px;
+    background-color: $main-white;
+    margin-top: 40px;
   }
 }
