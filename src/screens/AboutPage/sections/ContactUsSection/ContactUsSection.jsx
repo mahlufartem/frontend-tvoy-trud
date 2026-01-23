@@ -16,6 +16,15 @@ import styles from './ContactUsSection.module.scss'
 const ContactUsSection = () => {
 	const width = useWindowWidth()
 
+	const image =
+		width === 0
+			? contactPerson
+			: width < 1023
+				? contactPerson_S
+				: width < 1210
+					? contactPerson_M
+					: contactPerson
+
 	return (
 		<section className={styles.root}>
 			<div className={styles.content}>
@@ -27,13 +36,8 @@ const ContactUsSection = () => {
 				</div>
 				<div className={styles.image}>
 					<Image
-						src={
-							width < 1023
-								? contactPerson_S
-								: width < 1210
-									? contactPerson_M
-									: contactPerson
-						}
+						key={image.src}
+						src={image}
 						alt=''
 					/>
 				</div>

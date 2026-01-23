@@ -68,16 +68,31 @@
 	gap: 8px;
 
 	button {
-		width: fit-content;
-		height: fit-content;
 		border: none;
 		outline: none;
 		cursor: pointer;
 		background-color: transparent;
-
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		transition: all .4s;
+		&:hover {
+		background-color: $main-blue;
+		}
 		& svg {
 			width: 44px;
 			height: 44px;
+			transition: all .4s;
+
+			&:hover {
+				rect {
+					stroke: $main-white;
+				}
+					path {
+						stroke: $main-white;
+					}
+
+			}
 		}
 	}
 }

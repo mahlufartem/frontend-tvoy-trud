@@ -10,14 +10,13 @@
 	margin: 0 auto;
 	text-align: center;
 
+	@media (max-width: 1023px) {
+		padding: 40px 20px;
+	}
 
-  @media (max-width: 1023px) {
-    padding: 40px 20px;
-  }
-
-  @media (max-width: 767px) {
-    padding: 28px 20px;
-  }
+	@media (max-width: 767px) {
+		padding: 28px 20px;
+	}
 
 	.title {
 		font-size: 36px;
@@ -26,11 +25,11 @@
 		color: $main-white;
 		margin-bottom: 44px;
 
-      @media (max-width: 1023px) {
-        font-size: 32px;
-		  line-height: 32pz;
-        margin-bottom: 40px;
-      }
+		@media (max-width: 1023px) {
+			font-size: 32px;
+			line-height: 32pz;
+			margin-bottom: 40px;
+		}
 
 		@media (max-width: 500px) {
 			& span {
@@ -55,9 +54,9 @@
 		justify-content: space-between;
 		gap: 26px;
 
-      @media (max-width: 550px) {
-        flex-direction: column;
-      }
+		@media (max-width: 550px) {
+			flex-direction: column;
+		}
 	}
 
 	.input {
@@ -91,33 +90,38 @@
 		}
 	}
 
-  .text {
-    color: $main-white;
-    line-height: 17px;
-    margin-bottom: 44px;
+	.text {
+		color: $main-white;
+		line-height: 17px;
+		margin-bottom: 44px;
 
-    & a {
-      color: $main-white;
-      text-decoration: underline;
-    }
-  }
+		& a {
+			color: $main-white;
+			text-decoration: underline;
+		}
+	}
 
-  .sendBtn {
-    border: none;
-    outline: none;
-    padding: 20px 28px;
-    border-radius: 45px;
-    font-size: 20px;
-    color: $main-blue;
-    font-weight: 500;
-    cursor: pointer;
+	.sendBtn {
+		border: none;
+		outline: none;
+		padding: 20px 28px;
+		border-radius: 45px;
+		font-size: 20px;
+		color: $main-blue;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.4s;
 
-	  &:disabled {
-		  opacity: .5;
-	  }
+		&:hover {
+			color: $color-blue-500;
+		}
 
-    @media (max-width: 1023px) {
-      width: 100%;
-    }
-  }
+		&:disabled {
+			opacity: 0.5;
+		}
+
+		@media (max-width: 1023px) {
+			width: 100%;
+		}
+	}
 }

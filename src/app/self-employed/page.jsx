@@ -1,8 +1,9 @@
 import React from 'react'
-import SelfEmployed from '@/screens/SelfEmployed/SelfEmployed'
+
+import SelfEmployedPage from '@/screens/SelfEmployedPage/SelfEmployedPage'
 
 const Page = () => {
-	return <SelfEmployed/>
+	return <SelfEmployedPage />
 }
 
 export default Page

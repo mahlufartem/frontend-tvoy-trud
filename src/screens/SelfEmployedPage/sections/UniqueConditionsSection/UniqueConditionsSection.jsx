@@ -3,7 +3,7 @@ import React from 'react'
 
 import clsx from 'clsx'
 
-import { conditions } from '@/screens/SelfEmployed/sections/UniqueConditionsSection/data'
+import { conditions } from '@/screens/SelfEmployedPage/sections/UniqueConditionsSection/data'
 
 import { flash, warning } from '@/assets/images'
 

@@ -116,6 +116,14 @@
 
 	.catalogBtn {
 
+		button {
+			&:hover {
+				background-color: $main-blue;
+				color: $main-white;
+			}
+
+		}
+
 		@media (max-width: 1080px) {
 			display: none;
 		}

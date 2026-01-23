@@ -57,6 +57,13 @@
   width: 100%;
   height: 100%;
   display: block;
+
+  rect {
+    transition: all .4s;
+    &:hover {
+      fill: $color-hover-blue-200;
+    }
+  }
 }
 
 .item.active .icon {

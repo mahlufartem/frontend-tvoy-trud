@@ -50,11 +50,18 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	transition: background-color .3s;
+	transition: all .4s;
 
 	&:hover {
-		background: $main-light-blue;
+		background: $main-blue;
+		border: none;
+		& svg {
+			path {
+				stroke: $main-white;
+			}
+		}
 	}
+
 
 
 	@media (max-width: 767px) {

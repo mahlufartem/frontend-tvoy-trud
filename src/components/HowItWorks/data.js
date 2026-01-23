@@ -1,4 +1,4 @@
-export const STEPS = [
+export const steps = [
 	{
 		id: 1,
 		label: 'Способ 1',

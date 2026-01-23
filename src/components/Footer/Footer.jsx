@@ -55,7 +55,7 @@ const Footer = () => {
 							{footerLinks.map(block => (
 								<ul key={block.id}>
 									{block.items.map(item => (
-										<li key={item.href}>
+										<li key={item.label}>
 											<Link href={item.href}>{item.label}</Link>
 										</li>
 									))}

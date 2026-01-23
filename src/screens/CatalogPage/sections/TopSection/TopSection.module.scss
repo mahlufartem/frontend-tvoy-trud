@@ -163,6 +163,10 @@
 	transition: all 0.3s;
 	color: $main-black;
 
+	&:hover {
+		opacity: 1;
+	}
+
 	@media (max-width: 1023px) {
 		width: 100%;
 	}

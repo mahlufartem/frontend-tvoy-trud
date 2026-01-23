@@ -74,6 +74,11 @@
 			font-weight: 500;
 			color: $main-white;
 			padding: 20px 26px;
+			transition: all .4s;
+
+			&:hover {
+				background-color: $color-hover-primary;
+			}
 
 			@media (max-width: 1023px) {
 				font-size: 16px;

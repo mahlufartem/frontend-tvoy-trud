@@ -88,11 +88,11 @@ const VacanciesCarouselMin = () => {
 					onMouseLeave={stopDrag}
 				>
 					{vacancies.map(v => (
-						<div className={styles.cardWrapper}>
-							<article
-								key={v.id}
-								className={styles.card}
-							>
+						<div
+							className={styles.cardWrapper}
+							key={v.id}
+						>
+							<article className={styles.card}>
 								<div className={styles.image}>
 									<Image
 										src={v.img}

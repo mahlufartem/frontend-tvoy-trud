@@ -22,7 +22,6 @@ const FeedbackForm = () => {
 
 	const onSubmit = e => {
 		e.preventDefault()
-		console.log(form)
 	}
 
 	const isDisabled = !form.name || !form.phone || !form.question

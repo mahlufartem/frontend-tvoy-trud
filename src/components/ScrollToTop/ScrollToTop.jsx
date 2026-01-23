@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 
-import ArrowDownIcon from '@/assets/icons/ArrowDownIcon'
 import ArrowRightIcon from '@/assets/icons/ArrowRightIcon'
 
 import styles from './ScrollToTop.module.scss'

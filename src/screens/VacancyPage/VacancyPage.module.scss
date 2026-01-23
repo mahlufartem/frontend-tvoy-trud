@@ -73,6 +73,7 @@
 			background-color: rgba(202, 234, 217, 1);
 			padding: 30px;
 
+
 			@media (max-width: 767px) {
 				height: 320px;
 			}
@@ -170,6 +171,11 @@
 			padding: 20px 60px;
 			border-radius: 45px;
 			cursor: pointer;
+			transition: all .4s;
+
+			&:hover {
+				background-color: $color-hover-primary;
+			}
 		}
 
 		.accardionsGroup {

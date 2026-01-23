@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import { writeTg, writeWhatsApp } from '@/assets/images'
 
-import { STEPS } from '@/components/HowItWorks/data'
+import { steps } from '@/components/HowItWorks/data'
 
 import styles from './HowItWorks.module.scss'
 
@@ -117,7 +117,7 @@ const HowItWorks = () => {
 				</div>
 
 				<div className={styles.steps}>
-					{STEPS.map((step, index) => (
+					{steps.map((step, index) => (
 						<div
 							key={step.id}
 							ref={el => (stepsRef.current[index] = el)}

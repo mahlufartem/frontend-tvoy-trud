@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { duties } from '@/screens/SelfEmployed/sections/WhatNeedsSection/data'
+import { duties } from '@/screens/SelfEmployedPage/sections/WhatNeedsSection/data'
 
 import { question } from '@/assets/images'
 

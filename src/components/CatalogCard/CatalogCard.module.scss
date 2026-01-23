@@ -62,6 +62,7 @@
 		gap: 10px;
 		color: $main-blue;
 		font-weight: 500;
+		cursor: pointer;
 	}
 
 	.cardFooter {
@@ -109,6 +110,12 @@
 		padding: 20px 60px;
 		background-color: $main-blue;
 		color: $main-white;
+		cursor: pointer;
+		transition: all 0.4s;
+
+		&:hover {
+			background-color: $color-hover-primary;
+		}
 
 		@media (max-width: 767px) {
 			width: 100%;

@@ -177,6 +177,12 @@
 	padding: 28px 28px 38px;
 	margin-top: 15px;
 	cursor: pointer;
+	transition: all .4s;
+
+	&:hover {
+		background: $color-hover-primary;
+	}
+
 
 	@media (min-width: 1440px) {
 		margin-top: 20px;
