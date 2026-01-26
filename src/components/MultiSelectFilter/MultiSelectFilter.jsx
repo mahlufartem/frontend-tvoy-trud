@@ -21,6 +21,8 @@ const MultiSelectFilter = ({
 
 	const hasSelected = safeValue.length > 0
 
+	const selectedCount = safeValue.length
+
 	const filteredItems = useMemo(() => {
 		const q = search.toLowerCase()
 		return items.filter(item => item.label.toLowerCase().includes(q))
@@ -65,7 +67,12 @@ const MultiSelectFilter = ({
 					<div className={`${styles.arrow} ${isOpen ? styles.open : ''}`}>
 						<ArrowDownIcon />
 					</div>
-					<span className={styles.title}>{title}</span>
+					<div className={styles.title}>
+						<span>{title}</span>
+						{selectedCount > 0 && (
+							<span className={styles.count}>{`(${selectedCount})`}</span>
+						)}
+					</div>
 				</div>
 
 				{hasSelected && (

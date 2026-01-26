@@ -3,22 +3,18 @@ import { create } from 'zustand'
 const initialFilters = {
 	radius: 0,
 	date: '',
-	startTime: '09:00',
-	endTime: '09:00',
+	startTime: '',
+	endTime: '',
 	brands: [],
 	orderTypes: []
 }
 
 export const useCatalogFiltersStore = create((set, get) => ({
-	/* ---------------- mobile ---------------- */
-
 	isMobileFiltersOpen: false,
 	openMobileFilters: () => set({ isMobileFiltersOpen: true }),
 	closeMobileFilters: () => set({ isMobileFiltersOpen: false }),
 	toggleMobileFilters: () =>
 		set(state => ({ isMobileFiltersOpen: !state.isMobileFiltersOpen })),
-
-	/* ---------------- accordion ---------------- */
 
 	openAccordions: {},
 
@@ -34,9 +30,22 @@ export const useCatalogFiltersStore = create((set, get) => ({
 
 	closeAllAccordions: () => set({ openAccordions: {} }),
 
-	/* ---------------- filters ---------------- */
-
 	filters: initialFilters,
+
+	activeFiltersCount: () => {
+		const { filters } = get()
+
+		let count = 0
+
+		if (filters.radius > 0) count++
+		if (filters.date) count++
+		if (filters.startTime) count++
+		if (filters.endTime) count++
+		if (filters.brands.length > 0) count++
+		if (filters.orderTypes.length > 0) count++
+
+		return count
+	},
 
 	setFilter: (key, value) =>
 		set(state => ({

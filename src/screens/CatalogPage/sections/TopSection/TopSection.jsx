@@ -13,14 +13,25 @@ import MapIcon from '@/assets/icons/MapIcon'
 
 import CatalogFiltersMobile from '@/components/CatalogFiltersMobile/CatalogFiltersMobile'
 
+import Dropdown from '@/shared/ui/Dropdown/Dropdown'
 import SearchInput from '@/shared/ui/SearchInput/SearchInput'
 
 import styles from './TopSection.module.scss'
 
+export const cities = [
+	{ id: 1, label: 'Ростов-На-Дону' },
+	{ id: 2, label: 'Аксай' },
+	{ id: 3, label: 'Нвочеркаск' }
+]
+
 const TopSection = () => {
 	const [view, setView] = useState('list')
-	const { isMobileFiltersOpen, toggleMobileFilters } = useCatalogFiltersStore()
+	const [city, setCity] = useState('')
+	const { isMobileFiltersOpen, activeFiltersCount, toggleMobileFilters } =
+		useCatalogFiltersStore()
 
+	const filtersCount = activeFiltersCount()
+	console.log('filtersCount', filtersCount)
 	return (
 		<section className={styles.root}>
 			<div className={styles.searchGroup}>
@@ -28,15 +39,21 @@ const TopSection = () => {
 					<SearchInput className={styles.searchInput} />
 				</div>
 				<div className={styles.controls}>
-					<button className={styles.cityBtn}>
-						<span>г. Ярославль</span>
-						<ArrowDownIcon />
-					</button>
+					<Dropdown
+						placeholder='Выберите город'
+						options={cities}
+						value={city}
+						onChange={setCity}
+						className={styles.cityBtn}
+					/>
 					<button
 						className={styles.filtersToggle}
 						onClick={toggleMobileFilters}
 					>
 						<FiltersIcon />
+						{filtersCount > 0 && (
+							<span className={styles.badge}>{filtersCount}</span>
+						)}
 					</button>
 					<button className={styles.searchBtn}>Найти</button>
 				</div>
