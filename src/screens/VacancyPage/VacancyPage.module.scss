@@ -182,6 +182,13 @@
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
+
+			a {
+				color: $main-blue;
+				font-weight: 500;
+				cursor: pointer;
+				text-decoration: underline;
+			}
 		}
 
 		.vacancyList {

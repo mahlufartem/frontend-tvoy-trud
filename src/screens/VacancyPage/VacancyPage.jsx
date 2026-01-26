@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+import { APP_ROUTES } from '@/constants/routes'
+
 import { vacancyList } from '@/screens/CatalogPage/data'
 
 import ArrowRightIcon from '@/assets/icons/ArrowRightIcon'
@@ -69,35 +71,38 @@ const VacancyPage = ({ id }) => {
 						<Accordion title='Ваши обязанности'></Accordion>
 
 						<Accordion title='Требуется от вас'>
-							<div className={styles.yourRequired}>
-								<p>
-									Загрузите следующие документы в приложении “Твой труд”, что бы
-									иметь возможность взять данный заказ:
-								</p>
-								<ul>
-									<li>Паспорт</li>
-									<li>СНИЛС</li>
-									<li>ИНН</li>
-								</ul>
+							<Link href={APP_ROUTES.secondary.self_employed}>
+								Памятка для самозанятых от «ПОЧТА ЕКОМ»
+							</Link>
+							{/*<div className={styles.yourRequired}>*/}
+							{/*	<p>*/}
+							{/*		Загрузите следующие документы в приложении “Твой труд”, что бы*/}
+							{/*		иметь возможность взять данный заказ:*/}
+							{/*	</p>*/}
+							{/*	<ul>*/}
+							{/*		<li>Паспорт</li>*/}
+							{/*		<li>СНИЛС</li>*/}
+							{/*		<li>ИНН</li>*/}
+							{/*	</ul>*/}
 
-								<a href=''>Скачайте мобильное приложение “Твой Труд”</a>
-								<div className={styles.apps}>
-									<div>
-										<a href='#'>
-											<Image
-												src={rustore}
-												alt='rustore'
-											/>
-										</a>
-										<a href='#'>
-											<Image
-												src={googlePlay}
-												alt='google play'
-											/>
-										</a>
-									</div>
-								</div>
-							</div>
+							{/*	<a href=''>Скачайте мобильное приложение “Твой Труд”</a>*/}
+							{/*	<div className={styles.apps}>*/}
+							{/*		<div>*/}
+							{/*			<a href='#'>*/}
+							{/*				<Image*/}
+							{/*					src={rustore}*/}
+							{/*					alt='rustore'*/}
+							{/*				/>*/}
+							{/*			</a>*/}
+							{/*			<a href='#'>*/}
+							{/*				<Image*/}
+							{/*					src={googlePlay}*/}
+							{/*					alt='google play'*/}
+							{/*				/>*/}
+							{/*			</a>*/}
+							{/*		</div>*/}
+							{/*	</div>*/}
+							{/*</div>*/}
 						</Accordion>
 
 						<Accordion title='Инструктаж и обучение'></Accordion>
