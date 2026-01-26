@@ -31,7 +31,7 @@ const TopSection = () => {
 		useCatalogFiltersStore()
 
 	const filtersCount = activeFiltersCount()
-	console.log('filtersCount', filtersCount)
+
 	return (
 		<section className={styles.root}>
 			<div className={styles.searchGroup}>
