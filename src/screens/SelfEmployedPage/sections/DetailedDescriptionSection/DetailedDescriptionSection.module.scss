@@ -1,12 +1,21 @@
 .root {
-
   padding: 40px 0;
 
-  .header {
+
+  @media (max-width: 1023px) {
+    padding-left: 60px;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 20px;
+  }
+
+  .title {
     display: flex;
     gap: 30px;
     align-items: center;
     margin-bottom: 40px;
+    padding-right : 20px;
 
     @media (max-width: 1023px) {
       margin-bottom: 40px;
@@ -39,4 +48,126 @@
     }
   }
 
+  .tableWrapper {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 1.2fr;
+    gap: 16px;
+    margin-bottom: 20px;
+
+    div {
+      background: $main-blue;
+      color: $main-white;
+      font-weight: 500;
+      padding: 20px;
+      border-radius: 20px 20px 8px 8px;
+      font-size: 16px;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 1.2fr;
+    gap: 20px;
+  }
+
+  .cell {
+    background: $main-white;
+    border-radius: 16px;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .row:nth-child(odd) {
+    .cell {
+      background: $main-light-blue;
+    }
+  }
+
+  .warningWrapper {
+    padding-right: 60px ;
+    @media (max-width: 767px) {
+      padding-right: 20px;
+    }
+  }
+
+  .warning {
+    width: 100%;
+    padding: 28px;
+    background-color: $main-light-blue;
+    border-radius: 45px;
+    margin: 40px 0;
+
+    .warningTitle {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 40px;
+
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      img {
+        width: 72px;
+        height: 72px;
+
+        @media (max-width: 1023px) {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .dote {
+      display: block;
+      min-width: 5px;
+      min-height: 5px;
+      border-radius: 50%;
+      background-color: $main-black;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+  }
+
+  @media (max-width: 1023px) {
+    .header,
+    .row {
+      min-width: 900px;
+    }
+  }
 }

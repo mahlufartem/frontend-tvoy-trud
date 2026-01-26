@@ -2,7 +2,9 @@ import React from 'react'
 
 import DetailedDescriptionSection from '@/screens/SelfEmployedPage/sections/DetailedDescriptionSection/DetailedDescriptionSection'
 import HowToGoSection from '@/screens/SelfEmployedPage/sections/HowToGoSection/HowToGoSection'
+import ImportantToKnowSection from '@/screens/SelfEmployedPage/sections/ImportantToKnowSection/ImportantToKnowSection'
 import NextStepsSection from '@/screens/SelfEmployedPage/sections/NextSteps/NextStepsSection'
+import PayOrderSection from '@/screens/SelfEmployedPage/sections/PayOrderSection/PayOrderSection'
 import ShouldBeConsideredSection from '@/screens/SelfEmployedPage/sections/ShouldBeConsideredSection/ShouldBeConsideredSection'
 import UniqueConditionsSection from '@/screens/SelfEmployedPage/sections/UniqueConditionsSection/UniqueConditionsSection'
 import WhatNeedsSection from '@/screens/SelfEmployedPage/sections/WhatNeedsSection/WhatNeedsSection'
@@ -40,6 +42,12 @@ const SelfEmployedPage = () => {
 			</div>
 
 			<NextStepsSection />
+
+			<div className={styles.container}>
+				<ImportantToKnowSection />
+			</div>
+
+			<PayOrderSection />
 
 			<div className={styles.container}>
 				<DetailedDescriptionSection />
