@@ -1,0 +1,13 @@
+.root {
+  flex: 1;
+
+  .map {
+    flex: 1;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+

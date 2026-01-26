@@ -1,7 +1,12 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+
+import { APP_ROUTES } from '@/constants/routes'
+
+import { useCatalogFiltersStore } from '@/store/catalogFiltersStore'
 
 import { mapPlag } from '@/assets/images'
 import { mapItem_1, mapItem_2, mapItem_3 } from '@/assets/images/map_items'
@@ -19,6 +24,8 @@ const mapItems = [
 	{ id: 6, image: mapItem_2 }
 ]
 const Section_3 = () => {
+	const { setView } = useCatalogFiltersStore()
+
 	return (
 		<section className={styles.root}>
 			<div className={styles.cityVacanci}>
@@ -37,14 +44,18 @@ const Section_3 = () => {
 					/>
 				</div>
 				<div className={styles.map}>
-					<Image
-						src={mapPlag}
-						alt='Карта'
-						fill
-						priority
-						style={{ objectFit: 'cover' }}
-					/>
-
+					<Link
+						href={APP_ROUTES.primary.catalog}
+						onClick={() => setView('map')}
+					>
+						<Image
+							src={mapPlag}
+							alt='Карта'
+							fill
+							priority
+							style={{ objectFit: 'cover' }}
+						/>
+					</Link>
 					<div className={styles.mapItems}>
 						<div className={styles.mapItems}>
 							{mapItems.map((item, index) => (

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { useCatalogFiltersStore } from '@/store/catalogFiltersStore'
+
 import CatalogCard from '@/components/CatalogCard/CatalogCard'
 
 import styles from './VacancyList.module.scss'

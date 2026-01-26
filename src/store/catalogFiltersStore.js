@@ -30,7 +30,14 @@ export const useCatalogFiltersStore = create((set, get) => ({
 
 	closeAllAccordions: () => set({ openAccordions: {} }),
 
+	view: 'list',
+
 	filters: initialFilters,
+
+	setView: view =>
+		set(state => ({
+			view
+		})),
 
 	activeFiltersCount: () => {
 		const { filters } = get()

@@ -25,7 +25,8 @@ export const cities = [
 ]
 
 const TopSection = () => {
-	const [view, setView] = useState('list')
+	const { view, setView } = useCatalogFiltersStore()
+
 	const [city, setCity] = useState('')
 	const { isMobileFiltersOpen, activeFiltersCount, toggleMobileFilters } =
 		useCatalogFiltersStore()
