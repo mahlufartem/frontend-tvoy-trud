@@ -1,3 +1,6 @@
+import ChangeCityModal from '@/components/ChangeCityModal/ChangeCityModal'
+import CityConfirmModal from '@/components/CityConfirmModal/CityConfirmModal'
+import CityInitializer from '@/components/CityInitializer/CityInitializer'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import MainMenu from '@/components/MainMenu/MainMenu'
@@ -23,6 +26,9 @@ export default function RootLayout({ children }) {
 					<Footer />
 					<MainMenu />
 					<ScrollToTop />
+					<CityConfirmModal />
+					<ChangeCityModal />
+					<CityInitializer />
 				</div>
 			</body>
 		</html>

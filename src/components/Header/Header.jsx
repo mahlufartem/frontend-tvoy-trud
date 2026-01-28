@@ -6,6 +6,8 @@ import React from 'react'
 
 import { APP_ROUTES } from '@/constants/routes'
 
+import { useCityStore } from '@/store/userCityStore'
+
 import PencilIcon from '@/assets/icons/PencilIcon'
 import TelegramIcon from '@/assets/icons/TelegramIcon'
 import WhatsAppIcon from '@/assets/icons/WhatsAppIcon'
@@ -17,6 +19,8 @@ import Button from '@/shared/ui/Button/Button'
 import styles from './Header.module.scss'
 
 const Header = () => {
+	const { city, openCityModal, setCity, closeCityModal } = useCityStore()
+
 	return (
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
@@ -38,8 +42,11 @@ const Header = () => {
 				</div>
 				<div className={styles.rightSection}>
 					<div className={styles.info}>
-						<div className={styles.location}>
-							<span>Ярославль</span>
+						<div
+							className={styles.location}
+							onClick={() => openCityModal()}
+						>
+							<span>{city ? city : 'Ростов-на-Дону'}</span>
 							<PencilIcon />
 						</div>
 						<div className={styles.contacts}>

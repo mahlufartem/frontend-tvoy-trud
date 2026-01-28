@@ -1,0 +1,59 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  min-width: 320px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.yes {
+  outline: none;
+  border: none;
+  background: $main-blue;
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    background-color: $color-hover-primary;
+  }
+}
+
+.change {
+  border: 1px solid $main-blue;
+  color:$main-blue;
+  border-radius: 999px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    background-color: $main-light-blue;
+  }
+}

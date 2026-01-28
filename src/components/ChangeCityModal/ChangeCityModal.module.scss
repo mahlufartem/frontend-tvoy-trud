@@ -1,0 +1,50 @@
+.root {
+overflow: hidden;
+  .searchInput {
+    border: 1px solid $main-light-black;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    input {
+      color: $main-black;
+    }
+
+  }
+
+  h2 {
+    color: $main-light-black;
+  }
+
+  .list {
+    max-height: 300px;
+    overflow-y:auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    @media(max-width: 1023px) {
+      padding-bottom: 20px;
+      max-height: 600px;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 10px;
+      cursor: pointer;
+      transition: all .3s;
+      font-size: 16px;
+      &:hover {
+        background-color: $main-light-blue;
+      }
+    }
+  }
+}
+
+.modal {
+ overflow-y: hidden;
+}
