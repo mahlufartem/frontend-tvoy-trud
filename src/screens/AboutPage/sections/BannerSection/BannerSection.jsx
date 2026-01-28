@@ -4,6 +4,7 @@ import React from 'react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
+import DownloadIcon from '@/assets/icons/DownloadIcon'
 import { googlePlay, mainBannerFormsL, rustore } from '@/assets/images/'
 import { aboutPageHero } from '@/assets/images/about_page'
 
@@ -27,7 +28,6 @@ const BannerSection = () => {
 							Скачайте наше приложение что бы убедиться в этом!
 						</p>
 					</div>
-					<div className={styles.advantages}></div>
 					<div className={styles.apps}>
 						<a href='#'>
 							<Image
@@ -42,6 +42,14 @@ const BannerSection = () => {
 								alt='google play'
 								width={93}
 							/>
+						</a>
+					</div>
+					<div className={styles.apk}>
+						<a href='#'>
+							<DownloadIcon />
+							<p>
+								<span>APK файл</span>
+							</p>
 						</a>
 					</div>
 				</div>

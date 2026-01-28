@@ -9,6 +9,7 @@ import { Mousewheel, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import CalendarIcon from '@/assets/icons/CalendarIcon'
+import DownloadIcon from '@/assets/icons/DownloadIcon'
 import HomeIcon from '@/assets/icons/HomeIcon'
 import RubleIcon from '@/assets/icons/RubleIcon'
 import StudyIcon from '@/assets/icons/StudyIcon'
@@ -78,6 +79,14 @@ const Section_1 = () => {
 								</div>
 							</div>
 							<button className={styles.getWork}>Получить работу</button>
+							<div className={styles.apk}>
+								<a href='#'>
+									<DownloadIcon />
+									<p>
+										<span>APK файл</span>
+									</p>
+								</a>
+							</div>
 							<div className={styles.apps}>
 								<a href='#'>
 									<Image

@@ -11,6 +11,7 @@ import styles from './Modal.module.scss'
 const Modal = ({
 	isOpen,
 	title,
+	subtitle,
 	onClose,
 	children,
 	className,
@@ -51,6 +52,7 @@ const Modal = ({
 			>
 				<div className={styles.header}>
 					<h2 className={styles.title}>{title}</h2>
+					{subtitle ? <p>{subtitle}</p> : null}
 					<button
 						className={styles.close}
 						onClick={onClose}

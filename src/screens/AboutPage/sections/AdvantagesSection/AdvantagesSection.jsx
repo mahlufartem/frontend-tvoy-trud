@@ -21,20 +21,20 @@ const AdvantagesSection = () => {
 			<div className={styles.header}>
 				<h2 className={styles.title}>Наши преимущества</h2>
 
-				<div className={styles.controls}>
-					<button
-						className={styles.controlBtn}
-						onClick={() => scrollByCard(-1)}
-					>
-						<ArrowLeftRoundedIcon />
-					</button>
-					<button
-						className={styles.controlBtn}
-						onClick={() => scrollByCard(1)}
-					>
-						<ArrowRightRoundedIcon />
-					</button>
-				</div>
+				{/*<div className={styles.controls}>*/}
+				{/*	<button*/}
+				{/*		className={styles.controlBtn}*/}
+				{/*		onClick={() => scrollByCard(-1)}*/}
+				{/*	>*/}
+				{/*		<ArrowLeftRoundedIcon />*/}
+				{/*	</button>*/}
+				{/*	<button*/}
+				{/*		className={styles.controlBtn}*/}
+				{/*		onClick={() => scrollByCard(1)}*/}
+				{/*	>*/}
+				{/*		<ArrowRightRoundedIcon />*/}
+				{/*	</button>*/}
+				{/*</div>*/}
 			</div>
 
 			<div className={styles.viewport}>

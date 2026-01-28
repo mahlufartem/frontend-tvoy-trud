@@ -1,8 +1,11 @@
 'use client'
 
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 import clsx from 'clsx'
+
+import { APP_ROUTES } from '@/constants/routes'
 
 import CrossRoundedIcon from '@/assets/icons/CrossRoundedIcon'
 
@@ -19,6 +22,7 @@ const FAQ = ({ title = 'Ответы на вопросы', variant = 'secondary'
 
 	return (
 		<div className={clsx(styles.root, styles[variant])}>
+			<h2>Ответы на частые вопросы</h2>
 			<div className={styles.list}>
 				{faq.map(item => {
 					const isActive = item.id === activeId
@@ -50,7 +54,12 @@ const FAQ = ({ title = 'Ответы на вопросы', variant = 'secondary'
 				})}
 			</div>
 
-			<button className={styles.all}>Все вопросы</button>
+			<Link
+				href={APP_ROUTES.primary.knowledgeBase}
+				className={styles.all}
+			>
+				Все вопросы
+			</Link>
 		</div>
 	)
 }

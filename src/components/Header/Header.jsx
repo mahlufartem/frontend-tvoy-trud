@@ -47,7 +47,12 @@ const Header = () => {
 								<WhatsAppIcon />
 								<TelegramIcon />
 							</div>
-							<span className={styles.phone}>+7 900 800 70 60 </span>
+							<a
+								href='tel: +79008007060'
+								className={styles.phone}
+							>
+								+7 900 800 70 60
+							</a>
 						</div>
 					</div>
 					<div className={styles.buttons}>

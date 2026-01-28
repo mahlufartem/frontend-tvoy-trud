@@ -6,12 +6,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import { writeTg, writeWhatsApp } from '@/assets/images'
 
 import { steps } from '@/components/HowItWorks/data'
+import QuestionnaireForm from '@/components/QuestionnaireForm/QuestionnaireForm'
 
 import styles from './HowItWorks.module.scss'
 
 const clamp = (v, min, max) => Math.min(Math.max(v, min), max)
 
 const HowItWorks = () => {
+	const [open, setOpen] = useState(false)
 	const containerRef = useRef(null)
 	const stepsRef = useRef([])
 	const rafId = useRef(null)
@@ -143,13 +145,9 @@ const HowItWorks = () => {
 													src={writeTg}
 													alt=''
 												/>
-												<Image
-													src={writeWhatsApp}
-													alt=''
-												/>
 											</div>
 										</div>
-										<button>{step.button}</button>
+										<button onClick={() => setOpen(true)}>{step.button}</button>
 									</div>
 								)}
 
@@ -159,6 +157,10 @@ const HowItWorks = () => {
 					))}
 				</div>
 			</div>
+			<QuestionnaireForm
+				isOpen={open}
+				onClose={() => setOpen(false)}
+			/>
 		</section>
 	)
 }

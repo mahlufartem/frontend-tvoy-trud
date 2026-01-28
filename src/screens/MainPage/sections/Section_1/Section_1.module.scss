@@ -177,6 +177,37 @@
 		}
 	}
 
+	.apk {
+		border-radius: 10px;
+		background-color: white;
+		margin-bottom: 10px;
+		width: fit-content;
+		padding: 10px;
+		a {
+			cursor: pointer;
+			display: flex;
+			gap: 5px;
+			align-items: center;
+
+			p {
+				display: flex;
+				flex-direction: column;
+
+				span {
+					font-size: 12px;
+					font-weight: 500;
+
+					&:last-child{
+						font-size: 12px;
+					}
+				}
+			}
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
 	.apps {
 		display: flex;
 		gap: 14px;

@@ -1,15 +1,23 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
+import DownloadIcon from '@/assets/icons/DownloadIcon'
 import PencilIcon from '@/assets/icons/PencilIcon'
 import TelegramIcon from '@/assets/icons/TelegramIcon'
 import WhatsAppIcon from '@/assets/icons/WhatsAppIcon'
 import { googlePlay, logo, rustore } from '@/assets/images/index'
 
+import AppealToManagementForm from '@/components/AppealToManagementForm/AppealToManagementForm'
+
 import styles from './Footer.module.scss'
 import { footerLinks } from './data'
 
 const Footer = () => {
+	const [open, setOpen] = useState(false)
+
 	return (
 		<footer className={styles.root}>
 			<div className={styles.container}>
@@ -24,7 +32,10 @@ const Footer = () => {
 								alt='tvoy-trud'
 							/>
 						</Link>
-						<button className={styles.directBtn}>
+						<button
+							className={styles.directBtn}
+							onClick={() => setOpen(true)}
+						>
 							Прямое обращение к руководству
 						</button>
 
@@ -80,6 +91,14 @@ const Footer = () => {
 									/>
 								</a>
 							</div>
+							<div className={styles.apk}>
+								<a href='#'>
+									<DownloadIcon />
+									<p>
+										<span>APK файл</span>
+									</p>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -101,6 +120,10 @@ const Footer = () => {
 					</p>
 				</div>
 			</div>
+			<AppealToManagementForm
+				isOpen={open}
+				onClose={() => setOpen(false)}
+			/>
 		</footer>
 	)
 }

@@ -8,7 +8,7 @@ export const footerLinks = [
 			{ label: 'Акции', href: APP_ROUTES.primary.events },
 			{ label: 'Вопросы и ответы', href: APP_ROUTES.secondary.faq },
 			{
-				label: 'Инструкции для пользователей',
+				label: 'Инструкции профессий',
 				href: APP_ROUTES.secondary.instructions
 			},
 			{ label: 'База знаний', href: APP_ROUTES.primary.knowledgeBase }

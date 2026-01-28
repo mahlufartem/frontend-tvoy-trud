@@ -132,6 +132,46 @@
 		}
 	}
 
+	.apk {
+		padding: 10px;
+		border-radius: 10px;
+		background-color: $main-white;
+		width: fit-content;
+		margin-top: 13px;
+
+		@media (max-width: 1023px) {
+			margin-top: 0;
+			margin-bottom: 13px;
+		}
+
+
+		a {
+			cursor: pointer;
+			display: flex;
+			gap: 5px;
+			align-items: center;
+
+			p {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 0;
+
+				span {
+					font-size: 12px;
+					font-weight: 500;
+
+					&:last-child{
+						font-size: 12px;
+					}
+				}
+			}
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
 	.right {
 		flex: 1;
 		position: relative;

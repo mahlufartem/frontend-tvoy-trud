@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
 import { useWindowWidth } from '@/hooks/useWindowWidth'
 
@@ -11,9 +11,12 @@ import {
 	contactPerson_S
 } from '@/assets/images/about_page'
 
+import QuestionnaireForm from '@/components/QuestionnaireForm/QuestionnaireForm'
+
 import styles from './ContactUsSection.module.scss'
 
 const ContactUsSection = () => {
+	const [open, setOpen] = useState(false)
 	const width = useWindowWidth()
 
 	const image =
@@ -32,7 +35,7 @@ const ContactUsSection = () => {
 					<h4>Свяжитесь с нами</h4>
 					<span>И мы трудостроим вас за 24 часа!</span>
 
-					<button>Связаться</button>
+					<button onClick={() => setOpen(true)}>Связаться</button>
 				</div>
 				<div className={styles.image}>
 					<Image
@@ -42,6 +45,10 @@ const ContactUsSection = () => {
 					/>
 				</div>
 			</div>
+			<QuestionnaireForm
+				isOpen={open}
+				onClose={() => setOpen(false)}
+			/>
 		</section>
 	)
 }
