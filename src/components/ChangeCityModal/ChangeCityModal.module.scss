@@ -38,6 +38,7 @@ overflow: hidden;
       cursor: pointer;
       transition: all .3s;
       font-size: 16px;
+      color: $main-black;
       &:hover {
         background-color: $main-light-blue;
       }
