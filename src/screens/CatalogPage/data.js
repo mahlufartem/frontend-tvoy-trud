@@ -1,7 +1,7 @@
 export const vacancyList = [
 	{
 		id: '1',
-		title: 'Работник торгового зала / продавец',
+		title: 'Грузчик',
 		info: {
 			logo: '',
 			time: 'Сегодня, пн 21:00 - 06:00',

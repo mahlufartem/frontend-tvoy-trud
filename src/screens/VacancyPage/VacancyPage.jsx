@@ -9,8 +9,6 @@ import { vacancyList } from '@/screens/CatalogPage/data'
 import ArrowRightIcon from '@/assets/icons/ArrowRightIcon'
 import ClockIcon from '@/assets/icons/ClockIcon'
 import CoffeeIcon from '@/assets/icons/CoffeeIcon'
-import MapIcon from '@/assets/icons/MapIcon'
-import { googlePlay, rustore } from '@/assets/images'
 
 import VacancyList from '@/components/VacancyList/VacancyList'
 
@@ -105,7 +103,9 @@ const VacancyPage = ({ id }) => {
 							{/*</div>*/}
 						</Accordion>
 
-						<Accordion title='Инструктаж и обучение'></Accordion>
+						<Accordion title='Инструктаж и обучение'>
+							<Link href={`/instruction/${id}`}>Пройти инструктаж</Link>
+						</Accordion>
 					</div>
 
 					<div className={styles.vacancyList}>
