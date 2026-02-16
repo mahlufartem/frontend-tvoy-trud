@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Banner_1 from '@/screens/MainPage/Banners/Banner_1/Banner_1'
 import Banner_2 from '@/screens/MainPage/Banners/Banner_2/Banner_2'
+import Banner_3 from '@/screens/MainPage/Banners/Banner_3/Banner_3'
 
 import CalendarIcon from '@/assets/icons/CalendarIcon'
 import DownloadIcon from '@/assets/icons/DownloadIcon'
@@ -48,8 +49,9 @@ const Section_1 = () => {
 				<SwiperSlide>
 					<Banner_2 />
 				</SwiperSlide>
-				<SwiperSlide>Slide 3</SwiperSlide>
-				<SwiperSlide>Slide 4</SwiperSlide>
+				<SwiperSlide>
+					<Banner_3 />
+				</SwiperSlide>
 			</Swiper>
 		</section>
 	)

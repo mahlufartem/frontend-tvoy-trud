@@ -4,18 +4,11 @@
     position: relative;
     overflow: hidden;
 
-    @media (min-width: 1440px) {
-    }
-
     @media (max-width: 1023px) {
       flex-direction: column;
       height: fit-content;
-      //padding: 20px 80px 84px;
     }
 
-    @media (max-width: 766px) {
-
-    }
   }
 
   .left {
@@ -91,6 +84,12 @@
       @media (max-width: 1023px) {
         font-size: 32px;
         line-height: 32px;
+      }
+
+      @media (max-width: 767px) {
+        & br {
+          display: none;
+        }
       }
     }
   }
@@ -269,6 +268,7 @@
 
       @media (max-width: 767px) {
         width: 360px;
+        bottom: -30px;
       }
     }
   }
