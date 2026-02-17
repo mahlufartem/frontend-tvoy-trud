@@ -1,0 +1,47 @@
+.root {
+  padding-top: 50px;
+
+  h4 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 25px;
+
+    @media (max-width: 1023px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 36px;
+      margin-bottom: 28px;
+
+      br {
+        display: none;
+      }
+    }
+
+    span {
+      color: #0065E1;
+    }
+  }
+
+  .list {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    cursor: grab;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .list:active {
+    cursor: grabbing;
+  }
+}
