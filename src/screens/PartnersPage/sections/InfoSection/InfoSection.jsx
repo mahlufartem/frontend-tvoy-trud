@@ -68,6 +68,13 @@ const InfoSection = () => {
 					</div>
 				</div>
 				<div className={styles.bottomRight}>
+					<div className={styles.content}>
+						<span>Готовы начать?</span>
+						<p>
+							Присоединяйтесь <br /> к Твой Труд
+						</p>
+						<button>Присоединиться</button>
+					</div>
 					<Image
 						className={styles.background}
 						src={forms}

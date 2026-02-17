@@ -1,5 +1,6 @@
 import React from 'react'
 
+import ConsultationSection from '@/screens/PartnersPage/ConsultationSection/ConsultationSection'
 import AdvantagesSection from '@/screens/PartnersPage/sections/AdvantagesSection/AdvantagesSection'
 import BannerSection from '@/screens/PartnersPage/sections/BannerSection/BannerSection'
 import InfoSection from '@/screens/PartnersPage/sections/InfoSection/InfoSection'
@@ -14,6 +15,7 @@ const PartnersPage = () => {
 			<AdvantagesSection />
 			<PartnersSection />
 			<InfoSection />
+			<ConsultationSection />
 		</div>
 	)
 }
