@@ -1,0 +1,93 @@
+.root {
+  width: 100%;
+  padding: 0 90px;
+  margin-top: 100px;
+
+  @media(max-width: 1023px) {
+    padding: 0 25px;
+    margin-top: 70px;
+  }
+
+  .top {
+    display: flex;
+    gap: 30px;
+    height: 493px;
+
+    @media(min-width: 1440px) {
+      height: 665px;
+    }
+
+    @media(max-width: 1023px) {
+      flex-direction: column;
+      height: fit-content;
+    }
+  }
+
+  .topLeft {
+    position: relative;
+    width: 50%;
+    height: 100%;
+
+    @media(max-width: 1023px) {
+      width: 100%;
+      height: 526px;
+    }
+
+    @media(max-width: 600px) {
+      height: 276px;
+    }
+
+    img {
+      border-radius: 25px;
+
+      @media(max-width: 1023px) {
+
+      }
+    }
+
+  }
+
+
+
+  .topRight {
+
+    h4 {
+      font-size: 42px;
+      margin-bottom: 46px;
+      padding-top: 32px;
+
+      @media(max-width: 1023px) {
+        font-size: 36px;
+        margin-bottom: 24px;
+        padding-top: 0;
+        text-align: center;
+      }
+
+
+      @media(max-width: 767px) {
+        font-size: 28px;
+      }
+
+      span {
+       color: rgba(0, 101, 225, 1);
+      }
+    }
+
+    .whoCanCooperateList {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .whoCanCooperateItem {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+
+      img {
+        width: 54px;
+        height: 54px;
+      }
+    }
+  }
+}
