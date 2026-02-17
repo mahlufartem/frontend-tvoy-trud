@@ -1,7 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { whoCanCooperate } from '@/screens/PartnersPage/sections/InfoSection/data'
+import {
+	whoCanCooperate,
+	yourInstruments
+} from '@/screens/PartnersPage/sections/InfoSection/data'
 
 import {
 	dvaBiznesmena,
@@ -27,7 +30,7 @@ const InfoSection = () => {
 				<div className={styles.topRight}>
 					<h4>
 						<span>Кому удобно сотрудничать</span>
-						<br />с Твой Труд
+						<br /> с Твой Труд
 					</h4>
 
 					<div className={styles.whoCanCooperateList}>
@@ -47,17 +50,37 @@ const InfoSection = () => {
 				</div>
 			</div>
 			<div className={styles.bottom}>
-				<div className={styles.bottomLeft}></div>
-				{/*<div className={styles.bottomRight}>*/}
-				{/*	<Image*/}
-				{/*		src={forms}*/}
-				{/*		alt=''*/}
-				{/*	/>*/}
-				{/*	<Image*/}
-				{/*		src={handeWithPhone}*/}
-				{/*		alt=''*/}
-				{/*	/>*/}
-				{/*</div>*/}
+				<div className={styles.bottomLeft}>
+					<h4>
+						<span>Ваш основной</span> инструмент
+					</h4>
+					<p>Для управления заявками и контроля за вашими исполнителями</p>
+					<div className={styles.instrumentsList}>
+						{yourInstruments.map(i => (
+							<div
+								className={styles.instrument}
+								key={i.id}
+							>
+								<span>{i.id}</span>
+								<p>{i.text}</p>
+							</div>
+						))}
+					</div>
+				</div>
+				<div className={styles.bottomRight}>
+					<Image
+						className={styles.background}
+						src={forms}
+						fill
+						style={{ objectFit: 'cover', zIndex: -1 }}
+						alt=''
+					/>
+					<Image
+						className={styles.handeImage}
+						src={handeWithPhone}
+						alt=''
+					/>
+				</div>
 			</div>
 		</section>
 	)
