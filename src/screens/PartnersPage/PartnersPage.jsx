@@ -1,8 +1,8 @@
 import React from 'react'
 
-import ConsultationSection from '@/screens/PartnersPage/ConsultationSection/ConsultationSection'
 import AdvantagesSection from '@/screens/PartnersPage/sections/AdvantagesSection/AdvantagesSection'
 import BannerSection from '@/screens/PartnersPage/sections/BannerSection/BannerSection'
+import ConsultationSection from '@/screens/PartnersPage/sections/ConsultationSection/ConsultationSection'
 import InfoSection from '@/screens/PartnersPage/sections/InfoSection/InfoSection'
 import PartnersSection from '@/screens/PartnersPage/sections/PartnersSection/PartnersSection'
 

@@ -2,7 +2,11 @@ import { icon6, icon7, icon8 } from '@/assets/images/partnersPage'
 
 export const whoCanCooperate = [
 	{ id: 1, image: icon6, title: 'Действущим аутсорсинговым агентствам' },
-	{ id: 2, image: icon7, title: 'Владельцам таксопарков' },
+	{
+		id: 2,
+		image: icon7,
+		title: 'Компаниям с подбором на “массовые вакансии” '
+	},
 	{
 		id: 3,
 		image: icon8,

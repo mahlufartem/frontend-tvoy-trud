@@ -30,7 +30,7 @@ const InfoSection = () => {
 				<div className={styles.topRight}>
 					<h4>
 						<span>Кому удобно сотрудничать</span>
-						<br /> с Твой Труд
+						<br /> с Твой Труд?
 					</h4>
 
 					<div className={styles.whoCanCooperateList}>

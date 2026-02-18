@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { hero1 } from '@/assets/images/partnersPage'
+import { hero4 } from '@/assets/images/partnersPage'
 
 import styles from './BannerSection.module.scss'
 
@@ -10,7 +10,7 @@ const BannerSection = () => {
 		<section className={styles.root}>
 			<div className={styles.banner}>
 				<Image
-					src={hero1}
+					src={hero4}
 					alt=''
 					fill
 					priority
