@@ -61,6 +61,7 @@ const PartnersSection = () => {
 				<span>Более 25 компаний</span> по всей <br />
 				России — уже с нами
 			</h4>
+
 			<div
 				ref={listRef}
 				className={styles.list}
@@ -69,15 +70,17 @@ const PartnersSection = () => {
 				onMouseUp={handleMouseUp}
 				onMouseMove={handleMouseMove}
 			>
-				{partners.map(partner => (
-					<Image
-						key={partner.id}
-						src={partner.image}
-						width={width >= 768 ? 334 : 225}
-						alt=''
-						draggable={false}
-					/>
-				))}
+				<div className={styles.track}>
+					{[...partners, ...partners].map((partner, index) => (
+						<Image
+							key={index}
+							src={partner.image}
+							width={width >= 768 ? 334 : 225}
+							alt=''
+							draggable={false}
+						/>
+					))}
+				</div>
 			</div>
 		</section>
 	)
