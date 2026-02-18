@@ -5,7 +5,7 @@ export const whoCanCooperate = [
 	{
 		id: 2,
 		image: icon7,
-		title: 'Компаниям с подбором на “массовые вакансии” '
+		title: 'Компаниям с подбором на массовые вакансии'
 	},
 	{
 		id: 3,
