@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { requirements } from '@/screens/SelfEmployedPage/sections/WorkScheduleSection/data'
+import { requirements } from '@/screens/SelfEmployedBookletPage/sections/WorkScheduleSection/data'
 
 import { clock } from '@/assets/images'
 

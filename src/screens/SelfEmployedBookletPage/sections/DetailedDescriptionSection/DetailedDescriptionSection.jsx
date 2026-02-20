@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { services } from '@/screens/SelfEmployedPage/sections/DetailedDescriptionSection/data'
+import { services } from '@/screens/SelfEmployedBookletPage/sections/DetailedDescriptionSection/data'
 
 import { list, warning } from '@/assets/images'
 

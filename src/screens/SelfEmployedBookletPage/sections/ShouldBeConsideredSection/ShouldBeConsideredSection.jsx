@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { consideres } from '@/screens/SelfEmployedPage/sections/ShouldBeConsideredSection/data'
+import { consideres } from '@/screens/SelfEmployedBookletPage/sections/ShouldBeConsideredSection/data'
 
 import { lamp, warning } from '@/assets/images'
 

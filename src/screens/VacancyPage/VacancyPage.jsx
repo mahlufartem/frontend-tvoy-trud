@@ -69,7 +69,7 @@ const VacancyPage = ({ id }) => {
 						<Accordion title='Ваши обязанности'></Accordion>
 
 						<Accordion title='Требуется от вас'>
-							<Link href={APP_ROUTES.secondary.self_employed}>
+							<Link href={APP_ROUTES.secondary.self_employed_booklet}>
 								Памятка для самозанятых от «ПОЧТА ЕКОМ»
 							</Link>
 							{/*<div className={styles.yourRequired}>*/}

@@ -1,0 +1,51 @@
+.root {
+	.header {
+		padding: 120px 60px 40px 60px;
+		background-color: $main-light-blue;
+
+
+		@media (min-width: 1440px) {
+			padding: 140px 98px 60px 98px;
+		}
+
+		@media (max-width: 767px) {
+			padding: 100px 20px 28px 20px;
+		}
+
+		h2 {
+			font-size: 36px;
+			margin-bottom: 20px;
+
+			@media (max-width: 1023px) {
+				font-size: 32px;
+			}
+		}
+
+		p {
+			font-size: 16px;
+			color: $main-light-black;
+		}
+	}
+
+	.content {
+	}
+
+	.container {
+		max-width: 864px;
+		margin: 0 auto;
+	}
+
+	.feedBackSection {
+		padding: 60px;
+		background-color: $main-light-blue;
+		margin-top: 40px;
+
+		@media (max-width: 767px) {
+			padding: 20px;
+		}
+	}
+
+	.hoToGoSection {
+
+	}
+}

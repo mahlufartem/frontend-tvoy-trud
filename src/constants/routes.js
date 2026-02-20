@@ -13,6 +13,7 @@ export const APP_ROUTES = {
 		faq: '/faq',
 		instructions: '/instructions',
 		docs: '/about?scrollTo=documents ',
+		self_employed_booklet: '/self-employed-booklet',
 		self_employed: '/self-employed',
 		contacts: '/about?scrollTo=contacts',
 		partners: '/partners'
