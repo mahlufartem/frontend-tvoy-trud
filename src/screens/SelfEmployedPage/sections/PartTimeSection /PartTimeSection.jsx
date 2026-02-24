@@ -40,13 +40,14 @@ const PartTimeSection = () => {
 			</div>
 
 			<div className={styles.container}>
-				<Link
-					href={APP_ROUTES.primary.catalog}
-					className={styles.link}
-				>
-					Выбрать подработку
-				</Link>
-
+				<div className={styles.linkWrapper}>
+					<Link
+						href={APP_ROUTES.primary.catalog}
+						className={styles.link}
+					>
+						Выбрать подработку
+					</Link>
+				</div>
 				<div className={styles.hashtags}>
 					<h4>А так же</h4>
 
