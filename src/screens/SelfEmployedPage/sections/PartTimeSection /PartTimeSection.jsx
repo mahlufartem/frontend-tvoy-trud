@@ -14,30 +14,32 @@ import styles from './PartTimeSection.module.scss'
 const PartTimeSection = () => {
 	return (
 		<section className={styles.root}>
-			<div className={styles.header}>
-				<h4>Подработка для каждого</h4>
-				<span>Огромный выбор подработок с оплатой сразу после смены</span>
+			<div className={styles.container}>
+				<div className={styles.header}>
+					<h4>Подработка для каждого</h4>
+					<span>Огромный выбор подработок с оплатой сразу после смены</span>
+				</div>
+			</div>
+
+			<div className={styles.heroes}>
+				{heroes.map(hero => (
+					<div
+						className={styles.hero}
+						key={hero.id}
+					>
+						<Image
+							src={hero.image}
+							alt=''
+							fill
+							draggable={false}
+							className={styles.bg}
+						/>
+						<span>{hero.label}</span>
+					</div>
+				))}
 			</div>
 
 			<div className={styles.container}>
-				<div className={styles.heroes}>
-					{heroes.map(hero => (
-						<div
-							className={styles.hero}
-							key={hero.id}
-						>
-							<Image
-								src={hero.image}
-								alt=''
-								fill
-								sizes='402px'
-								className={styles.bg}
-							/>
-							<span>{hero.label}</span>
-						</div>
-					))}
-				</div>
-
 				<Link
 					href={APP_ROUTES.primary.catalog}
 					className={styles.link}

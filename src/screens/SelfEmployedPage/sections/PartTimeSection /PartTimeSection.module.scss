@@ -1,25 +1,21 @@
 .root {
 	width: 100%;
 	background-color: $main-light-blue;
-	padding: 60px 90px;
+	padding: 60px 0;
 	margin-top: 100px;
-
-	@media (max-width: 1440px) {
-		padding: 60px;
-	}
-
-	@media (max-width: 1440px) {
-		padding: 25px;
-	}
-
-	@media (max-width: 767px) {
-		padding: 15px;
-	}
 
 	.header {
 		width: 100%;
 		text-align: right;
 		margin-bottom: 40px;
+
+		@media (max-width: 1200px) {
+			padding: 0 25px;
+		}
+
+		@media (max-width: 767px) {
+			padding: 0 15px;
+		}
 
 		@media (max-width: 1023px) {
 			text-align: center;
@@ -62,7 +58,27 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 15px;
+		margin: 0 auto;
 		margin-bottom: 40px;
+		max-width: 1200px;
+		padding: 0;
+
+		@media (max-width: 1200px) {
+			padding: 0 0 0 60px;
+			overflow-x: scroll;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		@media (max-width: 1023px) {
+			padding: 0 25px;
+		}
+
+		@media (max-width: 767px) {
+			padding: 0 15px;
+		}
 
 		.hero {
 			display: flex;
@@ -73,8 +89,20 @@
 			height: 449px;
 			position: relative;
 			overflow: hidden;
+			border-radius: 16px;
 
-			bg {
+			@media (max-width: 1200px) {
+				min-width: 402px;
+			}
+
+
+			@media (max-width: 767px) {
+				width: 344px;
+				height: 370px;
+				min-width: 344px;
+			}
+
+			.bg {
 				object-fit: cover;
 			}
 		}
@@ -109,6 +137,19 @@
 	}
 
 	.hashtags {
+
+		@media (max-width: 1440px) {
+			padding: 0 60px;
+		}
+
+		@media (max-width: 1023px) {
+			padding: 0 25px;
+		}
+
+		@media (max-width: 767px) {
+			padding: 0 15px;
+		}
+
 		h4 {
 			font-size: 36px;
 			font-weight: 700;
