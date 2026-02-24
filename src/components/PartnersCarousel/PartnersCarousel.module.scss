@@ -1,0 +1,62 @@
+.root {
+	h4 {
+		font-size: 48px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 60px;
+		padding: 0 25px;
+
+		@media (max-width: 1023px) {
+			font-size: 42px;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 36px;
+			margin-bottom: 28px;
+
+			br {
+				display: none;
+			}
+		}
+
+		span {
+			color: #0065e1;
+		}
+	}
+
+	.list {
+		cursor: grab;
+		overflow: hidden;
+		position: relative;
+
+		-ms-overflow-style: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.track {
+			display: flex;
+			gap: 30px;
+			width: max-content;
+			animation: scroll 60s linear infinite;
+		}
+
+		@keyframes scroll {
+			from {
+				transform: translateX(0);
+			}
+			to {
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	.list:hover .track {
+		animation-play-state: paused;
+	}
+
+	.list:active {
+		cursor: grabbing;
+	}
+}

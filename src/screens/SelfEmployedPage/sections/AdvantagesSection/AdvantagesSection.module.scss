@@ -1,0 +1,101 @@
+.root {
+	h4 {
+		font-size: 42px;
+		text-align: center;
+		margin: 39px 0;
+
+      @media (min-width: 1440px) {
+        font-size: 48px;
+      }
+
+      @media (max-width: 1023px) {
+        font-size: 32px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 28px;
+      }
+	}
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 25px;
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 25px;
+        padding: 0 30px;
+
+
+      @media (max-width: 767px) {
+        padding: 0 15px;
+      }
+	}
+
+	.advantage {
+		display: flex;
+		flex-direction: column;
+		width: 379px;
+		height: 289px;
+		border: 1px solid rgba(0, 101, 225, 1);
+		border-radius: 16px;
+		padding: 22px;
+
+      @media (max-width: 1270px) {
+        align-items: center;
+        text-align: center;
+      }
+      @media (max-width: 767px) {
+       width: 347px;
+       height: 233px;
+      }
+
+		img {
+			width: 56px;
+			height: auto;
+			margin-bottom: 60px;
+
+
+          @media (max-width: 1270px) {
+            margin-bottom: 29px;
+          }
+		}
+
+		span {
+			color: rgba(0, 101, 225, 1);
+			font-size: 20px;
+			font-weight: 500;
+			margin-bottom: 16px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+
+	.vacanciesCarouselHeader {
+
+
+		@media (max-width: 1023px) {
+			& span {
+				display: inline;
+			}
+		}
+
+		@media (max-width: 767px) {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			padding: 0;
+			margin-top: 50px;
+
+			& span {
+				display: inline;
+			}
+		}
+	}
+
+	.partners {
+		margin-top: 100px;
+	}
+}

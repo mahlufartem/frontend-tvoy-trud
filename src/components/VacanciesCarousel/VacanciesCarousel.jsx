@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import React from 'react'
 
+import clsx from 'clsx'
+
 import useDragScroll from '@/hooks/useDragScroll'
 
 import ArrowLeftRoundedIcon from '@/assets/icons/ArrowLeftRoundedIcon'
@@ -12,7 +14,7 @@ import { vacancies } from '@/components/VacanciesCarousel/data'
 
 import styles from './VacanciesCarousel.module.scss'
 
-const VacanciesCarousel = () => {
+const VacanciesCarousel = ({ headerStyles }) => {
 	const { trackRef, scrollByCard, bind } = useDragScroll({
 		gap: 16,
 		dragClassName: styles.dragging
@@ -20,7 +22,7 @@ const VacanciesCarousel = () => {
 
 	return (
 		<div className={styles.root}>
-			<div className={styles.header}>
+			<div className={clsx(styles.header, headerStyles)}>
 				<h2 className={styles.title}>
 					<span>🔥</span> Горячие вакансии
 				</h2>
