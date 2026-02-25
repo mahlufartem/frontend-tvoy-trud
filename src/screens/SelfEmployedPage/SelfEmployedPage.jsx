@@ -5,6 +5,7 @@ import Banner2Section from '@/screens/SelfEmployedPage/Banner2Section/Banner2Sec
 import AdvantagesSection from '@/screens/SelfEmployedPage/sections/AdvantagesSection/AdvantagesSection'
 import AnswerQuestionSection from '@/screens/SelfEmployedPage/sections/AnswerQuestionSection/AnswerQuestionSection'
 import BannerSection from '@/screens/SelfEmployedPage/sections/BannerSection/BannerSection'
+import FooterSection from '@/screens/SelfEmployedPage/sections/FooterSection/FooterSection'
 import HowItWorksSection from '@/screens/SelfEmployedPage/sections/HowItWorksSection/HowItWorksSection'
 import PartTimeSection from '@/screens/SelfEmployedPage/sections/PartTimeSection /PartTimeSection'
 import ReviewsSection from '@/screens/SelfEmployedPage/sections/ReviewsSection/ReviewsSection'
@@ -23,6 +24,7 @@ const SelfEmployedPage = () => {
 			<ReviewsSection />
 			<Banner2Section />
 			<AnswerQuestionSection />
+			<FooterSection />
 		</section>
 	)
 }
