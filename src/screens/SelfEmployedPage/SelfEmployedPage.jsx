@@ -1,7 +1,9 @@
 import React from 'react'
 
+import FaqSection from '@/screens/FaqPage/sections/FaqSection/FaqSection'
 import Banner2Section from '@/screens/SelfEmployedPage/Banner2Section/Banner2Section'
 import AdvantagesSection from '@/screens/SelfEmployedPage/sections/AdvantagesSection/AdvantagesSection'
+import AnswerQuestionSection from '@/screens/SelfEmployedPage/sections/AnswerQuestionSection/AnswerQuestionSection'
 import BannerSection from '@/screens/SelfEmployedPage/sections/BannerSection/BannerSection'
 import HowItWorksSection from '@/screens/SelfEmployedPage/sections/HowItWorksSection/HowItWorksSection'
 import PartTimeSection from '@/screens/SelfEmployedPage/sections/PartTimeSection /PartTimeSection'
@@ -20,6 +22,7 @@ const SelfEmployedPage = () => {
 			<VacanciesSection />
 			<ReviewsSection />
 			<Banner2Section />
+			<AnswerQuestionSection />
 		</section>
 	)
 }

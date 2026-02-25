@@ -8,14 +8,20 @@ import FaqAccordion from '@/shared/ui/FaqAccordion/FaqAccordion'
 
 import styles from './FaqSection.module.scss'
 
-const FaqSection = ({ questions }) => {
+// TODO: Компонент переиспользуется. Вынести в components!
+const FaqSection = ({ questions, rootStyles }) => {
 	const [activeId, setActiveId] = useState(1)
+
+	const isSingle = questions.length === 1
 
 	const toggle = id => {
 		setActiveId(prev => (prev === id ? null : id))
 	}
 	return (
-		<div className={styles.root}>
+		<div
+			className={styles.root}
+			style={rootStyles}
+		>
 			{questions.map(item => {
 				const isActive = item.id === activeId
 
@@ -26,14 +32,23 @@ const FaqSection = ({ questions }) => {
 					>
 						<button
 							className={styles.head}
-							onClick={() => toggle(item.id)}
+							onClick={() => {
+								!isSingle && toggle(item.id)
+							}}
 							aria-expanded={isActive}
 						>
-							<span className={styles.question}>{item.label}</span>
-
-							<span className={styles.icon}>
-								<CrossRoundedIcon />
+							<span
+								className={styles.question}
+								style={{ color: isSingle && '#000' }}
+							>
+								{item.label}
 							</span>
+
+							{!isSingle && (
+								<span className={styles.icon}>
+									<CrossRoundedIcon />
+								</span>
+							)}
 						</button>
 
 						<div className={styles.body}>

@@ -47,6 +47,7 @@ const Banner2Section = () => {
 				src={bannerHero2}
 				alt=''
 				fill
+				priority
 				className={styles.bg}
 			/>
 		</section>

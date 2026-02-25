@@ -10,8 +10,9 @@ import styles from './FaqAccordion.module.scss'
 
 const FaqAccordion = ({
 	items = [],
-	title = 'Ответы на вопросы',
-	variant = 'secondary'
+	title = '',
+	variant = 'secondary',
+	listStyles
 }) => {
 	const [activeId, setActiveId] = useState(null)
 
@@ -21,7 +22,11 @@ const FaqAccordion = ({
 
 	return (
 		<div className={clsx(styles.root, styles[variant])}>
-			<div className={styles.list}>
+			{title && <div className={styles.title}>{title}</div>}
+			<div
+				className={styles.list}
+				style={listStyles}
+			>
 				{items.map(item => {
 					const isActive = item.id === activeId
 
