@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Banner2Section from '@/screens/SelfEmployedPage/Banner2Section/Banner2Section'
 import AdvantagesSection from '@/screens/SelfEmployedPage/sections/AdvantagesSection/AdvantagesSection'
 import BannerSection from '@/screens/SelfEmployedPage/sections/BannerSection/BannerSection'
 import HowItWorksSection from '@/screens/SelfEmployedPage/sections/HowItWorksSection/HowItWorksSection'
@@ -18,6 +19,7 @@ const SelfEmployedPage = () => {
 			<HowItWorksSection />
 			<VacanciesSection />
 			<ReviewsSection />
+			<Banner2Section />
 		</section>
 	)
 }

@@ -1,4 +1,5 @@
 export { default as bannerHero } from './bannerHero.png'
+export { default as bannerHero2 } from './bannerHero2.png'
 export { default as advantage1 } from './advantage1.png'
 export { default as advantage2 } from './advantage2.png'
 export { default as advantage3 } from './advantage3.png'
