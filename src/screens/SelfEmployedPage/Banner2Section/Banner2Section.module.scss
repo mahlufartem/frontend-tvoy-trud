@@ -36,9 +36,15 @@
 		object-fit: cover;
 		z-index: -1;
 
+		@media (max-width: 1400px) {
+			object-position: -400px 0;
+		}
+
 		@media (max-width: 1350px) {
 			object-position: -550px 0;
 		}
+
+
 
 		@media (max-width: 1150px) {
 			object-position: -800px 0;

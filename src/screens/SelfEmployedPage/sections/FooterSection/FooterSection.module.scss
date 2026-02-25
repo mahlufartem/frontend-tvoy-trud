@@ -5,6 +5,7 @@
 	background-color: $main-blue;
 	border-top-left-radius: 111px;
 	padding: 60px;
+	overflow: hidden;
 
 	@media (max-width: 1023px) {
 		height: fit-content;
