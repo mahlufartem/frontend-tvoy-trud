@@ -14,7 +14,7 @@ import { vacancies } from '@/components/VacanciesCarousel/data'
 
 import styles from './VacanciesCarousel.module.scss'
 
-const VacanciesCarousel = ({ headerStyles }) => {
+const VacanciesCarousel = ({ title, headerStyles }) => {
 	const { trackRef, scrollByCard, bind } = useDragScroll({
 		gap: 16,
 		dragClassName: styles.dragging
@@ -24,7 +24,11 @@ const VacanciesCarousel = ({ headerStyles }) => {
 		<div className={styles.root}>
 			<div className={clsx(styles.header, headerStyles)}>
 				<h2 className={styles.title}>
-					<span>🔥</span> Горячие вакансии
+					{title || (
+						<>
+							<span>🔥</span> Горячие вакансии
+						</>
+					)}
 				</h2>
 
 				<div className={styles.controls}>

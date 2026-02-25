@@ -2,6 +2,8 @@
 
 import React from 'react'
 
+import clsx from 'clsx'
+
 import useDragScroll from '@/hooks/useDragScroll'
 
 import ArrowLeftRoundedIcon from '@/assets/icons/ArrowLeftRoundedIcon'
@@ -12,14 +14,14 @@ import { reviews } from '@/components/ReviewsCarousel/data'
 
 import styles from './ReviewsCarousel.module.scss'
 
-const ReviewsCarousel = () => {
+const ReviewsCarousel = ({ rootStyles }) => {
 	const { trackRef, scrollByCard, bind } = useDragScroll({
 		gap: 24,
 		dragClassName: styles.dragging
 	})
 
 	return (
-		<section className={styles.root}>
+		<section className={clsx(styles.root, rootStyles)}>
 			<div className={styles.header}>
 				<h2>Отзывы о работе с нами</h2>
 
